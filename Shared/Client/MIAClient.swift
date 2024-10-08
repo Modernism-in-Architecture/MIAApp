@@ -6,38 +6,49 @@
 //
 
 import SwiftUI
+import OSLog
 
 // MARK: - MIAClient
 
 class MIAClient {
 
     private static let session = URLSession.shared
-
+    
     static func fetch(_ request: URLRequest) async -> Result<ClientResult, ClientError> {
+        
+        let startTime = CFAbsoluteTimeGetCurrent()
         
         do {
             
             let (data, response) = try await session.data(for: request, delegate: nil)
             
+            Logger.client.debug("\(request.description) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
+            
             guard let response = response as? HTTPURLResponse else {
                 return .failure(.InternalError(GenericError(message: "not a HTTPURLResponse")))
             }
             
-            switch response.statusCode {
-            case 200..<300:
-                return .success(ClientResult(data: data, respone: response))
-                
-            case 400..<500:
-                return .failure(.HTTPClientError(response))
-                
-            case 500..<600:
-                return .failure(.HTTPServerError(response))
-                
-            default:
-                return .failure(.InternalError(GenericError(message: "Unexpected HTTP status code: \(response.statusCode)")))
-            }
+            return checkStatusCode(response, data)
         } catch {
             return .failure(.InternalError(GenericError(message: error.localizedDescription)))
+        }
+    }
+    
+    private static func checkStatusCode(_ response: HTTPURLResponse, _ data: Data) -> Result<ClientResult, ClientError> {
+        
+        return switch response.statusCode {
+            
+        case 200..<300:
+            .success(ClientResult(data: data, respone: response))
+            
+        case 400..<500:
+            .failure(.HTTPClientError(response))
+            
+        case 500..<600:
+            .failure(.HTTPServerError(response))
+            
+        default:
+            .failure(.InternalError(GenericError(message: "Unexpected HTTP status code: \(response.statusCode)")))
         }
     }
 }
@@ -77,6 +88,7 @@ extension MIAClient {
     static func getExpireDate(response: HTTPURLResponse) -> Date {
         
         let defaultDate = Date(timeIntervalSinceNow: MIADefaults.ImageCache.maxAge)
+        
         guard
             let cacheControl = response.value(forHTTPHeaderField: "Cache-Control"),
             let maxAgeValue = cacheControl.components(separatedBy: ",")

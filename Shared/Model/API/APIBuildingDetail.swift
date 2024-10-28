@@ -34,11 +34,11 @@ extension APIBuildingDetail {
         let todaysUse: String
         let buildingType: String
         let history: String
+        let historyMarkdown: String
         let description: String
+        let descriptionMarkdown: String
         let directions: String
-        let sourceUrls: [APISourceURL]
         let architects: [APIArchitect]
-        let developers: [APIArchitect]
         let absoluteURL: String
     }
     
@@ -49,14 +49,5 @@ extension APIBuildingDetail {
         let id: Int
         let lastName: String
         let firstName: String
-    }
-    
-    // MARK: - APISourceURL
-    
-    struct APISourceURL: Decodable {
-        
-        let id: Int
-        let title: String
-        let url: String
     }
 }

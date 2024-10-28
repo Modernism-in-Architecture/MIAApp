@@ -23,8 +23,6 @@ class BuildingsMapper {
             yearOfConstruction: model.yearOfConstruction,
             city: model.city,
             country: model.country,
-            latitude: model.latitude,
-            longitude: model.longitude,
             feedImage: model.feedImage,
             previewImage: model.previewImage,
             coordinate: CLLocationCoordinate2D(latitude: model.latitude, longitude: model.longitude)
@@ -59,19 +57,20 @@ extension BuildingsMapper {
             architects: data.architects.map(map),
             absoluteURL: URL(string: data.absoluteURL)!,
             buildingType: data.buildingType,
-            attributedDescription: data.description.fromHtmlToAttributed(),
-            attributedHistory: data.history.fromHtmlToAttributed()
+//            attributedDescription: data.description.fromHtmlToAttributed(),
+//            attributedHistory: data.history.fromHtmlToAttributed()
+            attributedDescription: data.descriptionMarkdown.fromMarkdownToAttributedString,
+            attributedHistory: data.historyMarkdown.fromMarkdownToAttributedString
         )
     }
     
-    func map(_ model: APIBuildingDetail.APIArchitect) -> BuildingDetail.Architect {
+    func map(_ model: APIBuildingDetail.APIArchitect) -> Architect {
         
-        return BuildingDetail.Architect (
+        return Architect (
             id: model.id,
             lastName: model.lastName,
             firstName: model.firstName,
             fullName: [model.firstName, model.lastName].filter{ !$0.isEmpty }.joined(separator: ", ")
         )
     }
-    
 }

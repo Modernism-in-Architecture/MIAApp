@@ -28,6 +28,7 @@ extension APIArchitectDetail {
         let deathPlace: String
         let deathCountry: String
         let description: String
+        let descriptionMarkdown: String
         let relatedBuildings: [APIRelatedBuilding]
         let absoluteURL: String
     }

@@ -13,13 +13,16 @@ struct ArchitectView: View {
     @State var id: Int
 
     var body: some View {
+        
         switch architectDetailController.architectDetail {
         case .loading:
             MIAActivityIndicator().task {
                 await architectDetailController.fetchData(for: id)
             }
+            
         case .success(let detail):
             ArchitectDetailView(detail: detail)
+            
         case .error(_):
             // TODO: Better Error Message
             Text("Error")

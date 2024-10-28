@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 class BuildingViewModel: ObservableObject {
     
@@ -16,19 +17,28 @@ class BuildingViewModel: ObservableObject {
 
 // MARK: - Load BuildingDetail
 
-@MainActor
 extension BuildingViewModel {
     
     func fetchData(for id: Int) async {
+        
         do {
+            
+            let startTime = CFAbsoluteTimeGetCurrent()
             let detail = try await buildingsMangager.getBuildingDetail(for: id)
-            handle(detail: detail)
+            Logger.buildingDetail.debug("Fetch Building with id: \(id) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
+            await handle(detail: detail)
+            Logger.buildingDetail.debug("Handle Building with id: \(id) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
+            
         } catch let error as ManagerError {
-            handleLoadError(error: error)
+            await handleLoadError(error: error)
         } catch {
-            handleLoadError(error: .unknownError)
+            await handleLoadError(error: .unknownError)
         }
     }
+}
+    
+@MainActor
+extension BuildingViewModel {
     
     private func handle(detail: BuildingDetail) {
         self.detail = .success(detail)

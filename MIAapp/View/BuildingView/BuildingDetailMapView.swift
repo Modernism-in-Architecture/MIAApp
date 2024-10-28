@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import OSLog
 
 struct BuildingDetailMapView: View {
     
@@ -14,7 +15,11 @@ struct BuildingDetailMapView: View {
     
     var body: some View {
         
-        Map(initialPosition: .camera(MapCamera(centerCoordinate: building.coordinate, distance: 1000))) {
+        let cameraPosition: MapCameraPosition = .camera(
+            MapCamera(centerCoordinate: building.coordinate, distance: 1000)
+        )
+        
+        Map(initialPosition: cameraPosition) {
             
             Annotation(
                 building.name,

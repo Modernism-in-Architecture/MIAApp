@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 public class ImageCacheManager {
 
@@ -22,12 +23,16 @@ public class ImageCacheManager {
 
     func add(image: UIImage, for url: URL, until expirationDate: Date) {
         
+        Logger.cache.debug("Save image for url: \(url)")
+        
         let cacheObject = WrappedImage(image: image, expirationDate: expirationDate)
         let key = NSString(string: url.absoluteString)
         cache.setObject(cacheObject, forKey: key)
     }
 
     func get(url: URL) -> UIImage? {
+        
+        Logger.cache.debug("get image for url: \(url)")
         
         let key = NSString(string: url.absoluteString)
         

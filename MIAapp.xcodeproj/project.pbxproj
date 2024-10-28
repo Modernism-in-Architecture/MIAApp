@@ -62,6 +62,7 @@
 		11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FAA9B62725F3D200692DA3 /* Media.xcassets */; };
 		DB20763B2A54A53600106FC0 /* MIAAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20763A2A54A53600106FC0 /* MIAAsyncImageView.swift */; };
 		DB20763D2A54A54800106FC0 /* MIAAsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20763C2A54A54800106FC0 /* MIAAsyncImageViewModel.swift */; };
+		DB2F34AF2BFA0CBA00433A4E /* MIARouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */; };
 		DB71E6882A58A34200315D11 /* BuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6872A58A34200315D11 /* BuildingsManager.swift */; };
 		DB71E68E2A597F4300315D11 /* APIBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E68D2A597F4300315D11 /* APIBuilding.swift */; };
 		DB71E6912A5980CB00315D11 /* BuildingsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6902A5980CB00315D11 /* BuildingsMapper.swift */; };
@@ -89,11 +90,19 @@
 		DB71E6F72A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
 		DB71E6F82A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
 		DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
+		DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
 		DBA2CA832B38A4CE003BF743 /* Building+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA822B38A4CE003BF743 /* Building+Mock.swift */; };
 		DBA2CA882B39B9ED003BF743 /* URL+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA872B39B9ED003BF743 /* URL+Mock.swift */; };
 		DBA2CA8C2B39BAFE003BF743 /* Schunck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBA2CA8B2B39BAFE003BF743 /* Schunck.jpg */; };
 		DBA2CA8E2B3DEDC2003BF743 /* BuildingDetail+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */; };
 		DBA2CA902B3E0E2C003BF743 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
+		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
+		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
+		DBD499A62C27423000C088BF /* ArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A62A5C841300315D11 /* ArchitectDetail.swift */; };
+		DBD499A72C27423300C088BF /* Architect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A42A5C80EC00315D11 /* Architect.swift */; };
+		DBD499A82C27428D00C088BF /* ArchitectsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A22A5C809F00315D11 /* ArchitectsMapper.swift */; };
+		DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E69E2A5C7A2A00315D11 /* APIArchitect.swift */; };
+		DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A02A5C7D1400315D11 /* APIArchitectDetail.swift */; };
 		DBEAD8252A5366DA009A9E9B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +191,7 @@
 		DB1A58A92AE5C559007104E3 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		DB20763A2A54A53600106FC0 /* MIAAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAAsyncImageView.swift; sourceTree = "<group>"; };
 		DB20763C2A54A54800106FC0 /* MIAAsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAAsyncImageViewModel.swift; sourceTree = "<group>"; };
+		DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIARouter.swift; sourceTree = "<group>"; };
 		DB71E6872A58A34200315D11 /* BuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsManager.swift; sourceTree = "<group>"; };
 		DB71E68D2A597F4300315D11 /* APIBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilding.swift; sourceTree = "<group>"; };
 		DB71E6902A5980CB00315D11 /* BuildingsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsMapper.swift; sourceTree = "<group>"; };
@@ -199,6 +209,7 @@
 		DBA2CA8B2B39BAFE003BF743 /* Schunck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schunck.jpg; sourceTree = "<group>"; };
 		DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildingDetail+Mock.swift"; sourceTree = "<group>"; };
 		DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,6 +387,7 @@
 				11F55A03271C546800BF5E8E /* MIAappApp.swift */,
 				11DCCE4A289EF4DF0086418D /* MIAappDebug.entitlements */,
 				11521951289EECCE0090F324 /* MIAappRelease.entitlements */,
+				DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */,
 				11C478A027973BF7001C9D21 /* Secret.swift */,
 				1168106F27C1378100A62DD8 /* TabController.swift */,
 			);
@@ -400,6 +412,7 @@
 				11B0ED8A272DDE1400CA75FF /* BuildingView */,
 				11B0ED89272DDD6700CA75FF /* MIAMapView */,
 				11907CAA27B3296D00CC5368 /* shared */,
+				DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,7 +593,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					11AFF13E288F40D200BD2ADC = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -616,6 +629,7 @@
 			files = (
 				11AFF149288F40D400BD2ADC /* Assets.xcassets in Resources */,
 				11AFF158288F5CE700BD2ADC /* Media.xcassets in Resources */,
+				DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +641,7 @@
 				11F55A1A271CACC900BF5E8E /* Colors.xcassets in Resources */,
 				11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */,
 				11F55A0B271C546C00BF5E8E /* Preview Assets.xcassets in Resources */,
+				DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */,
 				DBA2CA8C2B39BAFE003BF743 /* Schunck.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,8 +692,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB71E6EF2A641E8400315D11 /* API.swift in Sources */,
+				DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */,
+				DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */,
 				DB71E6F12A641EBF00315D11 /* APIBuilding.swift in Sources */,
 				DB71E6F22A641EEB00315D11 /* APIBuildingDetail.swift in Sources */,
+				DBD499A72C27423300C088BF /* Architect.swift in Sources */,
+				DBD499A62C27423000C088BF /* ArchitectDetail.swift in Sources */,
+				DBD499A82C27428D00C088BF /* ArchitectsMapper.swift in Sources */,
 				DB71E6E72A641C7C00315D11 /* Building.swift in Sources */,
 				DB71E6F02A641EA800315D11 /* BuildingDetail.swift in Sources */,
 				DB71E6EC2A641E3600315D11 /* BuildingsManager.swift in Sources */,
@@ -686,6 +706,7 @@
 				DB71E6EA2A641DA700315D11 /* Constants.swift in Sources */,
 				DB71E6F52A641FA500315D11 /* Error.swift in Sources */,
 				DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */,
+				DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */,
 				DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */,
 				DB71E6EE2A641E7100315D11 /* MIAClient.swift in Sources */,
 				DB71E6F32A641F2900315D11 /* MIAToolBarLogo.swift in Sources */,
@@ -750,6 +771,7 @@
 				118680DA27B5B0360008C589 /* MIAFoldableText.swift in Sources */,
 				113478A4272B2B7700C94E69 /* MIAMapPinView.swift in Sources */,
 				1131C911271DE67F00DE3FAA /* MIAMapView.swift in Sources */,
+				DB2F34AF2BFA0CBA00433A4E /* MIARouter.swift in Sources */,
 				11E5E5692847AF3D0021D22A /* MIASearchBar.swift in Sources */,
 				11E5E56B2847C1310021D22A /* MIASearchButton.swift in Sources */,
 				11A3E55427B4853800423B65 /* MIASection.swift in Sources */,
@@ -838,6 +860,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -900,6 +923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

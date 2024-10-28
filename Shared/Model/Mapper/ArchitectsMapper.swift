@@ -48,7 +48,7 @@ extension ArchitectsMapper {
             deathCountry: data.deathCountry,
             description: data.description,
             relatedBuildings: data.relatedBuildings.map(map), // TODO: Fill
-            attributedDescription: data.description.fromHtmlToAttributed(),
+            attributedDescription: data.descriptionMarkdown.fromMarkdownToAttributedString,
             birth: dateAndPlace(date: formatDate(data.birthDay ?? ""), place: data.birthPlace, country: data.birthCountry),
             death: dateAndPlace(date: formatDate(data.deathDay ?? ""), place: data.deathPlace, country: data.deathCountry),
             absoluteURL: URL(string: data.absoluteURL)!)
@@ -65,12 +65,9 @@ extension ArchitectsMapper {
             yearOfConstruction: model.yearOfConstruction,
             city: model.city,
             country: model.country,
-            latitude: model.latitude,
-            longitude: model.longitude,
-            // TODO replace exclamation mark
             feedImage: URL(string: model.feedImage),
             previewImage: URL(string: model.feedImage),
-            coordinate: CLLocationCoordinate2D(latitude: model.longitude, longitude: model.latitude))
+            coordinate: CLLocationCoordinate2D(latitude: model.latitude, longitude: model.longitude))
     }
 }
 

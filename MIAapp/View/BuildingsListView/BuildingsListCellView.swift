@@ -16,10 +16,13 @@ struct BuildingsListCellView: View {
     let searchText: String
     
     var body: some View {
-        NavigationLink(destination: BuildingView(building: building)) {
+//        NavigationLink(destination: BuildingView(building: building)) {
             if searchText.isEmpty {
+                
                 VStack(alignment: .leading, spacing: 0) {
+                    
                     ZStack(alignment: .top) {
+                        
                         MIAAsyncHeaderImage(url: building.feedImage)
                         bookmark
                     }
@@ -32,12 +35,14 @@ struct BuildingsListCellView: View {
             } else {
                 caption
             }
-        }
-        .buttonStyle(.plain)
+//        }
+//        .buttonStyle(.plain)
     }
     
     var caption: some View {
+        
         VStack(alignment: .leading) {
+            
             Text(building.name)
                 .lineLimit(1)
             Text("\(building.city), \(building.country)")
@@ -47,9 +52,12 @@ struct BuildingsListCellView: View {
     }
     
     var bookmark: some View {
+        
         HStack {
+            
             Spacer()
             if isBookmarked {
+                
                 Image(systemName: "bookmark.fill")
                     .font(.title)
                     .foregroundColor(.red)

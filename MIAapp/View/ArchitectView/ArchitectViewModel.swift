@@ -18,7 +18,9 @@ class ArchitectViewModel: ObservableObject {
 extension ArchitectViewModel {
     
     func fetchData(for id: Int) async {
+        
         do {
+            
             let detail = try await architectsManager.getArchitectDetail(for: id)
             handle(detail: detail)
         } catch let error as ManagerError {

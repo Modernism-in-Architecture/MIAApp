@@ -9,6 +9,7 @@ import UIKit
 
 extension String {
 
+    @available(*, deprecated, message: "Please use fromMarkdownToAttributedString")
     func fromHtmlToAttributed() -> AttributedString {
         let trimmed = self.trimmingCharacters(in: .whitespacesAndNewlines)
         guard let attributedString = try? NSMutableAttributedString(data: trimmed.data(using: .unicode)!,
@@ -23,5 +24,15 @@ extension String {
         attributedString.addAttributes([NSAttributedString.Key.font: font], range: textRangeForFont)
         attributedString.addAttributes([NSAttributedString.Key.foregroundColor: UIColor.label], range: textRangeForFont)
         return AttributedString(attributedString)
+    }
+}
+
+extension String {
+    
+    var fromMarkdownToAttributedString: AttributedString {
+        let font = UIFont.preferredFont(forTextStyle: .body)
+        var attributedString = (try? AttributedString(markdown: self)) ?? AttributedString("")
+        attributedString.font = font
+        return attributedString
     }
 }

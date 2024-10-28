@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 struct BuildingView: View {
 
@@ -15,13 +16,18 @@ struct BuildingView: View {
     var body: some View {
         
         switch detailController.detail {
+            
         case .success(let detail):
             BuildingDetailView(building: building, buildingDetail: detail)
             
         case .loading:
             MIAActivityIndicator()
                 .task {
-                    await detailController.fetchData(for: building.id)
+                    let clock = ContinuousClock()
+                    let elapsedTime = await clock.measure {
+                        await detailController.fetchData(for: building.id)
+                    }
+                    Logger.buildingDetail.debug("Time elapsed loading Detail: \(elapsedTime)")
                 }
             
         case .error(_):

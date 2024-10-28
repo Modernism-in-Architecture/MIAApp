@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import OSLog
 
 
 struct BuildingDetailView: View {
@@ -15,6 +16,9 @@ struct BuildingDetailView: View {
     
     @EnvironmentObject
     var tabController: TabController
+    
+    @EnvironmentObject
+    var router: MIARouter
     
     @State
     var building: Building
@@ -48,6 +52,10 @@ struct BuildingDetailView: View {
                 BookmarkToolbarView(id: building.id)
                 MIAShareView(url: buildingDetail.absoluteURL)
             }
+        }
+        .onAppear {
+            Logger.buildingDetail.debug("debug")
+            Logger.buildingDetail.debug("\(building.coordinate.debugDescription)")
         }
     }
 }
@@ -112,11 +120,17 @@ private extension BuildingDetailView {
         
         ForEach(buildingDetail.architects) { architect in
             
-            NavigationLink(destination: ArchitectView(id: architect.id)) {
-                
-                Text(architect.fullName)
-                    .underline()
-            }
+            Text(architect.fullName)
+                .underline()
+                .onTapGesture {
+                    router.showArchitect(architect: architect)
+                }
+            
+//            NavigationLink(destination: ArchitectView(id: architect.id)) {
+//                
+//                Text(architect.fullName)
+//                    .underline()
+//            }
             .buttonStyle(.plain)
         }
     }

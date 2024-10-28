@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct MIAappApp: App {
     
+    @StateObject var router = MIARouter()
     @StateObject var buildingsController = BuildingsListViewModel()
     @StateObject var architectsController = ArchitectsListViewModel()
     @StateObject var tabController = TabController()
@@ -20,6 +21,7 @@ struct MIAappApp: App {
         WindowGroup {
             
             ContentView()
+                .environmentObject(router)
                 .environmentObject(buildingsController)
                 .environmentObject(architectsController)
                 .environmentObject(tabController)

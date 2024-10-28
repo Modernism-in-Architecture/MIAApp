@@ -21,7 +21,10 @@ struct MIAMapView: View {
     @EnvironmentObject 
     private var tabController: TabController
     
-    @State 
+    @EnvironmentObject
+    private var router: MIARouter
+    
+    @State
     private var selectedItem: Building = .empty
     
     @State
@@ -32,15 +35,17 @@ struct MIAMapView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             
             ZStack {
                 
                 map
-                    .background(
-                        NavigationLink(destination: BuildingView(building: selectedItem), isActive: $tabController.mapSubviewsVisible) { EmptyView() }
-                            .isDetailLink(false)
-                    )
+//                    .background(
+//                        NavigationLink(destination: BuildingView(building: selectedItem), isActive: $tabController.mapSubviewsVisible) { EmptyView() }
+//                            .isDetailLink(false)
+                        
+//                        NavigationLink(value: selectedItem, label: {})
+//                    )
             }
             .mapScope(mapScope)
             .toolbar {
@@ -51,6 +56,9 @@ struct MIAMapView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+//        .navigationDestination(for: MIARouter.MapRoute.self) { buildingRoute in
+//            
+//        }
     }
     
     var map: some View {
@@ -73,6 +81,7 @@ struct MIAMapView: View {
                             Logger.map.debug("Building \(building.id) selected.")
                             selectedItem = building
                             tabController.mapSubviewsVisible = true
+                            router.showBuilding(building: building)
                         }
                 }
             }

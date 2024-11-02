@@ -12,11 +12,14 @@ struct ArchitectsListView: View {
     @EnvironmentObject var architectsController: ArchitectsListViewModel
     
     var body: some View {
+        
         switch architectsController.state {
         case .success:
             ArchitectsListSuccessView()
+            
         case .loading:
             MIAActivityIndicator()
+            
         case .error(let error):
             // TODO: pass real error if changed to ManagerError
             MIAErrorView(error: .notImplementedError)

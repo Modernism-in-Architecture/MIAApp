@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ArchitectViewModel: ObservableObject {
+class ArchitectDetailViewModel: ObservableObject {
     
     @Published var architectDetail: LoadingStateWithContent<ArchitectDetail> = .loading
     
@@ -15,7 +15,7 @@ class ArchitectViewModel: ObservableObject {
 }
     
 @MainActor
-extension ArchitectViewModel {
+extension ArchitectDetailViewModel {
     
     func fetchData(for id: Int) async {
         

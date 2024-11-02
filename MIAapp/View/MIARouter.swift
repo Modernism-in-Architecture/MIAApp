@@ -10,14 +10,20 @@ import SwiftUI
 class MIARouter: ObservableObject {
     
     @Published
-    var selectedTab: MainScreen = .buildings
+    var path = NavigationPath()
     
     @Published
-    var buildingRoutes: [BuildingRoute] = []
+    var selectedTab: MainScreen = .buildings
     
-    var mapRoutes: [MapRoute] = []
-    var architectRoutes: [ArchitectRoute] = []
-    var bookmarksRoutes: [BookmarksRoute] = []
+//    @Published
+//    var buildingRoutes: [BuildingRoute] = []
+    
+//    var mapRoutes: [MapRoute] = []
+    
+//    @Published
+//    var architectRoutes: [ArchitectRoute] = []
+    
+//    var bookmarksRoutes: [BookmarksRoute] = []
     
     enum MainScreen: Identifiable, Hashable, CaseIterable {
         
@@ -31,42 +37,54 @@ class MIARouter: ObservableObject {
         }
     }
     
-    enum BuildingRoute: Hashable {
+    enum DetailsRoute: Hashable {
         
-        case home
-        case detail(building: Building)
-    }
-    
-    enum MapRoute {
-        case home(building: BuildingRoute?)
-    }
-    
-    enum ArchitectRoute: Hashable {
+        case architect(architect: Architect)
+        case building(building: Building)
         
-        case home
-        case detail(architect: Architect)
+        @ViewBuilder
+        var view: some View {
+            
+            switch self {
+            case let .architect(architect):
+                ArchitectDetailView(id: architect.id)
+                
+            case let .building(building):
+                BuildingView(building: building)
+            }
+        }
     }
-    
-    enum BookmarksRoute {
-        case home
-    }
+//    
+//    enum BuildingRoute: Hashable {
+//        
+//        case home
+//        case detail(building: Building)
+//    }
+//    
+//    enum MapRoute {
+//        case home(building: BuildingRoute?)
+//    }
+//    
+//    enum ArchitectRoute: Hashable {
+//        
+//        case home
+//        case detail(architect: Architect)
+//    }
+//    
+//    enum BookmarksRoute {
+//        case home
+//    }
 }
 
 @MainActor
 extension MIARouter {
     
-    func showBuilding(building: Building) {
-        
-        buildingRoutes.removeAll()
-        buildingRoutes.append(.detail(building: building))
-        selectedTab = .buildings
+    func showBuildingDetail(building: Building) {
+        path.append(DetailsRoute.building(building: building))
     }
     
-    func showArchitect(architect: Architect) {
-        
-        architectRoutes.removeAll()
-        architectRoutes.append(.detail(architect: architect))
-        selectedTab = .architects
+    func showArchitectDetail(architect: Architect) {
+        path.append(DetailsRoute.architect(architect: architect))
     }
 }
 
@@ -79,13 +97,13 @@ extension MIARouter.MainScreen {
         
         switch self {
         case.buildings:
-            BuildingsListView()
+            BuildingsHomeView()
             
         case .map:
             MIAMapView()
             
         case .architects:
-            ArchitectsListView()
+            ArchitectsHomeView()
             
         case .bookmarks:
             BookmarksView()

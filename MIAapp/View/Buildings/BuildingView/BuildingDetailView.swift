@@ -20,6 +20,7 @@ struct BuildingDetailView: View {
     @EnvironmentObject
     var router: MIARouter
     
+    // TODO: - Remove
     @State
     var building: Building
     
@@ -123,10 +124,10 @@ private extension BuildingDetailView {
             Text(architect.fullName)
                 .underline()
                 .onTapGesture {
-                    router.showArchitect(architect: architect)
+                    router.showArchitectDetail(architect: architect)
                 }
             
-//            NavigationLink(destination: ArchitectView(id: architect.id)) {
+//            NavigationLink(destination: ArchitectDetailView(id: architect.id)) {
 //                
 //                Text(architect.fullName)
 //                    .underline()

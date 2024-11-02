@@ -81,7 +81,7 @@ struct MIAMapView: View {
                             Logger.map.debug("Building \(building.id) selected.")
                             selectedItem = building
                             tabController.mapSubviewsVisible = true
-                            router.showBuilding(building: building)
+                            router.showBuildingDetail(building: building)
                         }
                 }
             }

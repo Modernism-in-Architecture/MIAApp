@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArchitectDetailView: View {
+struct ArchitectDetailSuccessView: View {
     
     @EnvironmentObject
     var router: MIARouter
@@ -69,7 +69,7 @@ struct ArchitectDetailView: View {
 //                }
                 BuildingsListCellView(building: building, searchText: "")
                     .onTapGesture {
-                        router.showBuilding(building: building)
+                        router.showBuildingDetail(building: building)
                     }
                 .buttonStyle(.plain)
             }

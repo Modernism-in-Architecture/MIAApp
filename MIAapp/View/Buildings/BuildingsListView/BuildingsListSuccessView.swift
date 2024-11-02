@@ -22,7 +22,7 @@ struct BuildingsListSuccessView: View {
         @ObservedObject
         var router = self.router
         
-        NavigationStack(path: $router.buildingRoutes) {
+//        NavigationStack(path: $router.path) {
             
             VStack {
                 
@@ -38,7 +38,7 @@ struct BuildingsListSuccessView: View {
                             
                             BuildingsListCellView(building: building, searchText: searchText)
                                 .onTapGesture {
-                                    router.showBuilding(building: building)
+                                    router.showBuildingDetail(building: building)
                                 }
                             
 //                            NavigationLink(value: MIARouter.BuildingRoute.detail(building: building)) {
@@ -61,14 +61,14 @@ struct BuildingsListSuccessView: View {
                         MIASearchButton(isSearching: $isSearching)
                     }
                 }
-            }
-            .navigationDestination(for: MIARouter.BuildingRoute.self) { buildingRoute in
-                
-                if case let .detail(building) = buildingRoute {
-                    BuildingView(building: building)
-                }
-                
-            }
+//            }
+//            .navigationDestination(for: MIARouter.BuildingRoute.self) { buildingRoute in
+//                
+//                if case let .detail(building) = buildingRoute {
+//                    BuildingView(building: building)
+//                }
+//                
+//            }
         }
 //        .disableAutocorrection(true)
 //        .searchable(text: $searchText)

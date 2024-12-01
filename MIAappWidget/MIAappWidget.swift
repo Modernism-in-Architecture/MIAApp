@@ -86,6 +86,7 @@ private extension Provider {
             let loadAfterDate = Calendar.current.date(byAdding: .hour, value: offset, to: now)!
             entries.append(
                 SimpleEntry(
+                    id: building.id,
                     date: loadAfterDate,
                     image: image,
                     name: building.name,
@@ -104,6 +105,7 @@ private extension Provider {
 
 struct SimpleEntry: TimelineEntry {
     
+    let id: Int
     let date: Date
     let image: UIImage?
     let name: String
@@ -111,7 +113,7 @@ struct SimpleEntry: TimelineEntry {
 }
 
 extension SimpleEntry {
-    static let placeholder = SimpleEntry(date: Date.now, image: UIImage(named: "petershof"), name: "Petershof", cityCountry: "Leipzig, Germany")
+    static let placeholder = SimpleEntry(id: 0, date: Date.now, image: UIImage(named: "petershof"), name: "Petershof", cityCountry: "Leipzig, Germany")
 }
 
 struct MIAappWidgetEntryView: View {

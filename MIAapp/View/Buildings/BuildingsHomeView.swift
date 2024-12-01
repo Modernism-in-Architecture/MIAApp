@@ -18,9 +18,7 @@ struct BuildingsHomeView: View {
             
             BuildingsListView()
                 .navigationDestination(for: MIARouter.DetailsRoute.self) { destination in
-                    
                     destination.view
-                        .toolbar(.hidden, for: .tabBar)
                 }
         }
     }

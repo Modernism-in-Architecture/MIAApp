@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Combine
+import OSLog
 
 class MIARouter: ObservableObject {
     
@@ -15,16 +17,28 @@ class MIARouter: ObservableObject {
     @Published
     var selectedTab: MainScreen = .buildings
     
-//    @Published
-//    var buildingRoutes: [BuildingRoute] = []
+    @Published
+    private(set) var tabBarVisibility: Visibility = .visible
     
-//    var mapRoutes: [MapRoute] = []
+    private(set) var selectedBuildingForMap: Building = .empty
+        
+    private var subscribers = Set<AnyCancellable>()
     
-//    @Published
-//    var architectRoutes: [ArchitectRoute] = []
+    init() {
+        setup()
+    }
     
-//    var bookmarksRoutes: [BookmarksRoute] = []
-    
+    func setup() {
+        
+        self.$path.sink { newPath in
+            
+            if newPath.isEmpty {
+                self.showTabbar()
+            }
+        }
+        .store(in: &subscribers)
+    }
+        
     enum MainScreen: Identifiable, Hashable, CaseIterable {
         
         case buildings
@@ -50,41 +64,60 @@ class MIARouter: ObservableObject {
                 ArchitectDetailView(id: architect.id)
                 
             case let .building(building):
-                BuildingView(building: building)
+                BuildingDetailView(building: building)
             }
         }
     }
-//    
-//    enum BuildingRoute: Hashable {
-//        
-//        case home
-//        case detail(building: Building)
-//    }
-//    
-//    enum MapRoute {
-//        case home(building: BuildingRoute?)
-//    }
-//    
-//    enum ArchitectRoute: Hashable {
-//        
-//        case home
-//        case detail(architect: Architect)
-//    }
-//    
-//    enum BookmarksRoute {
-//        case home
-//    }
 }
 
-@MainActor
+private extension MIARouter {
+    
+    func showTabbar() {
+        
+        withAnimation{
+            self.tabBarVisibility = .visible
+        }
+    }
+        
+    func hideTabbar() {
+        self.tabBarVisibility = .hidden
+    }
+}
+
+//@MainActor
 extension MIARouter {
     
+    func toRoot() {
+        
+        showTabbar()
+        while path.count > 0 {
+            path.removeLast()
+        }
+    }
+    
     func showBuildingDetail(building: Building) {
+        
+        hideTabbar()
         path.append(DetailsRoute.building(building: building))
     }
     
     func showArchitectDetail(architect: Architect) {
+        
+        hideTabbar()
         path.append(DetailsRoute.architect(architect: architect))
+    }
+    
+    func showMap(with building: Building) {
+        
+        toRoot()
+        selectedBuildingForMap = building
+        selectedTab = .map
+    }
+    
+    func switchToBuildingsAndShowDetail(for building: Building) {
+        
+        selectedTab = .buildings
+        showBuildingDetail(building: building)
     }
 }
 
@@ -96,17 +129,17 @@ extension MIARouter.MainScreen {
     var rootView: some View {
         
         switch self {
-        case.buildings:
+        case .buildings:
             BuildingsHomeView()
             
         case .map:
-            MIAMapView()
+            MapHomeView()
             
         case .architects:
             ArchitectsHomeView()
             
         case .bookmarks:
-            BookmarksView()
+            BookmarksHomeView()
         }
     }
 }

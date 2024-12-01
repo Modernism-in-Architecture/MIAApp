@@ -21,6 +21,7 @@ struct ContentView: View {
             ForEach(MIARouter.MainScreen.allCases) { tab in
                 
                 tab.rootView
+                    .toolbar(router.tabBarVisibility, for: .tabBar)
                     .tag(tab as MIARouter.MainScreen)
                     .tabItem { tab.label }
             }

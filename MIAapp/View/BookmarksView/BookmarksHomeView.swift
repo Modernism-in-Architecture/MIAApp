@@ -1,13 +1,13 @@
 //
-//  ArchitectsHomeView.swift
+//  BookmarksHomeView.swift
 //  MIAapp
 //
-//  Created by Sören Kirchner (privat) on 01.11.24.
+//  Created by Sören Kirchner (privat) on 08.11.24.
 //
 
 import SwiftUI
 
-struct ArchitectsHomeView: View {
+struct BookmarksHomeView: View {
     
     @EnvironmentObject
     var router: MIARouter
@@ -16,7 +16,7 @@ struct ArchitectsHomeView: View {
         
         NavigationStack(path: $router.path) {
             
-            ArchitectsListView()
+            BookmarksView()
                 .navigationDestination(for: MIARouter.DetailsRoute.self) { destination in
                     destination.view
                 }
@@ -25,5 +25,5 @@ struct ArchitectsHomeView: View {
 }
 
 #Preview {
-    ArchitectsHomeView()
+    BookmarksHomeView()
 }

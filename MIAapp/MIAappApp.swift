@@ -11,9 +11,9 @@ import SwiftUI
 struct MIAappApp: App {
     
     @StateObject var router = MIARouter()
-    @StateObject var buildingsController = BuildingsListViewModel()
-    @StateObject var architectsController = ArchitectsListViewModel()
-    @StateObject var tabController = TabController()
+    @StateObject var buildingsListViewModel = BuildingsListViewModel()
+    @StateObject var mapViewModel = MIAMapViewModel()
+    @StateObject var architectsListViewModel = ArchitectsListViewModel()
     @StateObject var cloudKitBookmarksController = BookmarksViewModel()
 
     var body: some Scene {
@@ -22,14 +22,17 @@ struct MIAappApp: App {
             
             ContentView()
                 .environmentObject(router)
-                .environmentObject(buildingsController)
-                .environmentObject(architectsController)
-                .environmentObject(tabController)
+                .environmentObject(buildingsListViewModel)
+                .environmentObject(mapViewModel)
+                .environmentObject(architectsListViewModel)
                 .environmentObject(cloudKitBookmarksController)
                 .task {
                     
-                    await buildingsController.fetchData()
-                    await architectsController.fetchData()
+                    await buildingsListViewModel.fetchData()
+                    await architectsListViewModel.fetchData()
+                }
+                .onOpenURL { url in
+                    print("Received deep link: \(url)")
                 }
         }
     }

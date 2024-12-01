@@ -2,161 +2,57 @@
 //  BuildingDetailView.swift
 //  MIAapp
 //
-//  Created by Sören Kirchner on 28.05.22.
+//  Created by Sören Kirchner on 21.10.21.
 //
 
-import SwiftUI
-import MapKit
 import OSLog
+import SwiftUI
 
+// MARK: - BuildingDetailView
 
 struct BuildingDetailView: View {
+
+    @StateObject
+    var buildingDetailViewModel = BuildingViewModel()
     
-    // MARK: - Properties
-    
-    @EnvironmentObject
-    var tabController: TabController
-    
-    @EnvironmentObject
-    var router: MIARouter
-    
-    // TODO: - Remove
     @State
     var building: Building
-    
-    @State
-    var buildingDetail: BuildingDetail
-    
-    @State
-    private var showShareSheet = false
-    
-    @State
-    private var sharedItems = []
-    
+        
     var body: some View {
         
-        ScrollView {
-            
-            VStack(alignment: .leading) {
-                
-                MIAAsyncHeaderImage(url: building.feedImage)
-                details
-                    .padding()
+        content
+            .task {
+//                let clock = ContinuousClock()
+//                let elapsedTime = await clock.measure {
+                    await buildingDetailViewModel.fetchData(for: building.id)
+//                }
+//                Logger.buildingDetail.debug("Time elapsed loading Detail: \(elapsedTime)")
             }
-        }
-        .padding(.top, 10)
-        .navigationTitle(building.name)
-        .toolbar {
+    }
+}
+
+extension BuildingDetailView {
+    
+    @ViewBuilder
+    var content: some View {
+        
+        switch buildingDetailViewModel.detail {
             
-            HStack {
-                
-                BookmarkToolbarView(id: building.id)
-                MIAShareView(url: buildingDetail.absoluteURL)
-            }
-        }
-        .onAppear {
-            Logger.buildingDetail.debug("debug")
-            Logger.buildingDetail.debug("\(building.coordinate.debugDescription)")
+        case .success(let detail):
+            BuildingDetailSuccessView(building: building, buildingDetail: detail)
+            
+        case .loading:
+            MIAActivityIndicator()
+            
+        case .error:
+            // TODO: pass real error if changed to ManagerError
+            MIAErrorView(error: .notImplementedError)
         }
     }
 }
 
-// MARK: - Body
-
-private extension BuildingDetailView {
-    
-    var details: some View {
-        
-        VStack (alignment: .leading, spacing: 15) {
-            
-            MIASection("Building") {
-                buildingDetails
-            }
-            MIASection("Architects", ignoreIf: buildingDetail.architects.isEmpty) {
-                architectsDetails
-            }
-            MIASection("Description", ignoreIf: buildingDetail.description.isEmpty) {
-                MIAFoldableText(text: buildingDetail.attributedDescription)
-            }
-            MIASection("History", ignoreIf: buildingDetail.description.isEmpty) {
-                MIAFoldableText(text: buildingDetail.attributedHistory)
-            }
-            MIASection("Location") {
-                locationDetail
-            }
-            MIASection("Impressions", ignoreIf: buildingDetail.galleryImages.isEmpty) {
-                BuildingDetailGridGalleryView(images: buildingDetail.galleryImages)
-                    .padding(.top, 5)
-            }
-        }
-    }
-    
-    var buildingDetails: some View {
-        
-        VStack(alignment: .leading) {
-            
-            Text(buildingDetail.name)
-                .font(.headline)
-                .padding(.bottom, 5)
-            if !buildingDetail.buildingType.isEmpty {
-                Text(buildingDetail.buildingType)
-                    .padding(.bottom, 5)
-            }
-            Text(buildingDetail.address)
-            Text(buildingDetail.cityCountry)
-            VStack(alignment: .leading) {
-                
-                if !buildingDetail.todaysUse.isEmpty {
-                    Text("Today's Use: \(buildingDetail.todaysUse)")
-                }
-                if !buildingDetail.yearOfConstruction.isEmpty {
-                    Text("Year of Construction: \(buildingDetail.yearOfConstruction)")
-                }
-            }
-            .padding(.top, 5)
-        }
-    }
-    
-    var architectsDetails: some View {
-        
-        ForEach(buildingDetail.architects) { architect in
-            
-            Text(architect.fullName)
-                .underline()
-                .onTapGesture {
-                    router.showArchitectDetail(architect: architect)
-                }
-            
-//            NavigationLink(destination: ArchitectDetailView(id: architect.id)) {
-//                
-//                Text(architect.fullName)
-//                    .underline()
-//            }
-            .buttonStyle(.plain)
-        }
-    }
-    
-    var locationDetail: some View {
-        
-        ZStack {
-            
-            BuildingDetailMapView(building: building)
-            .frame(height: 250)
-            .mask(RoundedRectangle(cornerRadius: 10))
-            .padding(.top, 5)
-            .allowsHitTesting(false) // No Interaction
-            Color.clear
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    
-                    tabController.setCameraPosition(to: building.coordinate)
-                    self.tabController.mapSubviewsVisible = false
-                    tabController.selection = .map
-                }
-        }
-    }
-}
-
-#Preview {
-    BuildingDetailView(building: .schunckMock, buildingDetail: .schunckMock)
-}
+// struct MIADetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BuildingDetailSuccessView(item: .example())
+//    }
+// }

@@ -27,10 +27,12 @@ class BuildingsManager {
                 let jsonData = try JSONDecoder().decode(APIBuildings.self, from: data.data)
                 return mapper.map(jsonData)
             } catch {
+                Logger.buildingsManager.debug("\(error)")
                 throw ManagerError.unknownError
             }
 
         case .failure(let error):
+            Logger.buildingsManager.debug("\(error)")
             throw ManagerError(clientError: error)
         }
     }
@@ -54,10 +56,12 @@ class BuildingsManager {
                 
                 return business
             } catch {
+                Logger.buildingsManager.debug("\(error)")
                 throw ManagerError.unknownError
             }
 
         case .failure(let error):
+            Logger.buildingsManager.debug("\(error)")
             throw ManagerError(clientError: error)
         }
     }

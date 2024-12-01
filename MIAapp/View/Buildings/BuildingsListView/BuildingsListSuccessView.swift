@@ -65,7 +65,7 @@ struct BuildingsListSuccessView: View {
 //            .navigationDestination(for: MIARouter.BuildingRoute.self) { buildingRoute in
 //                
 //                if case let .detail(building) = buildingRoute {
-//                    BuildingView(building: building)
+//                    BuildingDetailView(building: building)
 //                }
 //                
 //            }

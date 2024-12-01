@@ -64,7 +64,7 @@ struct ArchitectDetailSuccessView: View {
         LazyVGrid(columns: columns, alignment:.leading, spacing: 20) {
             
             ForEach(detail.relatedBuildings) { building in
-//                NavigationLink(destination: BuildingView(building: building)) {
+//                NavigationLink(destination: BuildingDetailView(building: building)) {
 //                    BuildingsListCellView(building: building, searchText: "")
 //                }
                 BuildingsListCellView(building: building, searchText: "")

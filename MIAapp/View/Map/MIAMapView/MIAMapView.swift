@@ -6,8 +6,8 @@
 //
 
 import MapKit
-import SwiftUI
 import OSLog
+import SwiftUI
 
 // MARK: - MIAMapView
 
@@ -17,15 +17,12 @@ struct MIAMapView: View {
     
     @EnvironmentObject
     private var buildingsViewModel: BuildingsListViewModel
-    
-    @EnvironmentObject 
-    private var tabController: TabController
+
+    @EnvironmentObject
+    private var mapViewModel: MIAMapViewModel
     
     @EnvironmentObject
     private var router: MIARouter
-    
-    @State
-    private var selectedItem: Building = .empty
     
     @State
     private var showPinShadow = true
@@ -34,37 +31,28 @@ struct MIAMapView: View {
     private var mapScope
     
     var body: some View {
+                    
+        content
+    }
+    
+    var content: some View {
         
-        NavigationStack {
-            
-            ZStack {
+        ZStack {
+            map
+        }
+        .mapScope(mapScope)
+        .toolbar {
                 
-                map
-//                    .background(
-//                        NavigationLink(destination: BuildingView(building: selectedItem), isActive: $tabController.mapSubviewsVisible) { EmptyView() }
-//                            .isDetailLink(false)
-                        
-//                        NavigationLink(value: selectedItem, label: {})
-//                    )
-            }
-            .mapScope(mapScope)
-            .toolbar {
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    MIAToolBarLogo()
-                }
+            ToolbarItem(placement: .navigationBarLeading) {
+                MIAToolBarLogo()
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-//        .navigationDestination(for: MIARouter.MapRoute.self) { buildingRoute in
-//            
-//        }
     }
     
     var map: some View {
-
-        return Map(
-            position: $tabController.cameraPosition,
+        
+        Map(
+            position: $mapViewModel.cameraPosition,
             bounds: MapCameraBounds(minimumDistance: .defaultCameraDistance),
             scope: mapScope
         ) {
@@ -79,20 +67,24 @@ struct MIAMapView: View {
                         .onTapGesture {
                             
                             Logger.map.debug("Building \(building.id) selected.")
-                            selectedItem = building
-                            tabController.mapSubviewsVisible = true
                             router.showBuildingDetail(building: building)
                         }
                 }
             }
         }
         .mapStyle(.standard(elevation: .realistic))
+        .ignoresSafeArea(edges: .bottom)
         .mapControls {
-            
-            MapPitchToggle()
-            MapUserLocationButton()
-            MapCompass()
-            MapScaleView()
+
+            VStack {
+                
+                MapPitchToggle()
+                MapUserLocationButton()
+                MapCompass()
+                MapScaleView()
+            }
+            .background(.brown)
+            .padding()
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Places")

@@ -16,7 +16,7 @@ struct BuildingsListCellView: View {
     let searchText: String
     
     var body: some View {
-//        NavigationLink(destination: BuildingView(building: building)) {
+//        NavigationLink(destination: BuildingDetailView(building: building)) {
             if searchText.isEmpty {
                 
                 VStack(alignment: .leading, spacing: 0) {

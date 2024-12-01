@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArchitectDetail {
+struct ArchitectDetail: Hashable {
     
     let id: Int
     let lastName: String

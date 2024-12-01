@@ -1,21 +1,27 @@
 //
-//  BuildingDetailView.swift
+//  BuildingDetailSuccessView.swift
 //  MIAapp
 //
 //  Created by Sören Kirchner on 28.05.22.
 //
 
-import SwiftUI
 import MapKit
+import OSLog
+import SwiftUI
 
+// MARK: - BuildingDetailSuccessView
 
-struct BuildingDetailView: View {
+struct BuildingDetailSuccessView: View {
     
     // MARK: - Properties
     
     @EnvironmentObject
-    var tabController: TabController
+    var router: MIARouter
+  
+    @EnvironmentObject
+    var mapViewModel: MIAMapViewModel
     
+    // TODO: - Remove
     @State
     var building: Building
     
@@ -29,6 +35,20 @@ struct BuildingDetailView: View {
     private var sharedItems = []
     
     var body: some View {
+        
+        content
+            .onAppear {
+                Logger.buildingDetail.debug("debug")
+                Logger.buildingDetail.debug("\(building.coordinate.debugDescription)")
+            }
+    }
+}
+
+// MARK: - Body
+
+private extension BuildingDetailSuccessView {
+    
+    var content: some View {
         
         ScrollView {
             
@@ -50,15 +70,10 @@ struct BuildingDetailView: View {
             }
         }
     }
-}
-
-// MARK: - Body
-
-private extension BuildingDetailView {
     
     var details: some View {
         
-        VStack (alignment: .leading, spacing: 15) {
+        VStack(alignment: .leading, spacing: 15) {
             
             MIASection("Building") {
                 buildingDetails
@@ -112,12 +127,12 @@ private extension BuildingDetailView {
         
         ForEach(buildingDetail.architects) { architect in
             
-            NavigationLink(destination: ArchitectView(id: architect.id)) {
-                
-                Text(architect.fullName)
-                    .underline()
-            }
-            .buttonStyle(.plain)
+            Text(architect.fullName)
+                .underline()
+                .onTapGesture {
+                    router.showArchitectDetail(architect: architect)
+                }
+                .buttonStyle(.plain)
         }
     }
     
@@ -126,22 +141,23 @@ private extension BuildingDetailView {
         ZStack {
             
             BuildingDetailMapView(building: building)
-            .frame(height: 250)
-            .mask(RoundedRectangle(cornerRadius: 10))
-            .padding(.top, 5)
-            .allowsHitTesting(false) // No Interaction
+                .frame(height: 250)
+                .mask(RoundedRectangle(cornerRadius: 10))
+                .padding(.top, 5)
+                .allowsHitTesting(false) // No Interaction
             Color.clear
                 .contentShape(Rectangle())
                 .onTapGesture {
                     
-                    tabController.setCameraPosition(to: building.coordinate)
-                    self.tabController.mapSubviewsVisible = false
-                    tabController.selection = .map
+                    print("Tapped")
+                    mapViewModel.setCameraPosition(to: building)
+                    router.toRoot()
+                    router.showMap(with: building)
                 }
         }
     }
 }
 
 #Preview {
-    BuildingDetailView(building: .schunckMock, buildingDetail: .schunckMock)
+    BuildingDetailSuccessView(building: .schunckMock, buildingDetail: .schunckMock)
 }

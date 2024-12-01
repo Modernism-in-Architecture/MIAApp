@@ -12,11 +12,15 @@ struct BuildingsListView: View {
     @EnvironmentObject var buildingsController: BuildingsListViewModel
 
     var body: some View {
+        
         switch buildingsController.state {
+            
         case .success:
             BuildingsListSuccessView(buildings: buildingsController.buildings)
+            
         case .loading:
             MIAActivityIndicator()
+            
         case .error(let error):
             // TODO: pass real error if changed to ManagerError
             MIAErrorView(error: .notImplementedError)

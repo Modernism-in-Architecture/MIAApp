@@ -9,8 +9,11 @@ import Foundation
 
 class ArchitectsListViewModel: ObservableObject {
     
-    @Published var architects: [Architect] = []
-    @Published var state: LoadingState = .loading
+    @Published
+    var architects: [Architect] = []
+    
+    @Published
+    var state: LoadingState = .loading
     
     private var architectsManager = ArchitectsManager()
 }
@@ -19,7 +22,9 @@ class ArchitectsListViewModel: ObservableObject {
 extension ArchitectsListViewModel {
     
     func fetchData() async {
+        
         do {
+            
             let architects = try await architectsManager.getArchitects()
             handle(architects: architects)
         } catch {
@@ -28,11 +33,13 @@ extension ArchitectsListViewModel {
     }
     
     private func handle(architects: [Architect]) {
+        
         self.architects = architects
         self.state = .success
     }
     
     private func handleLoadError(error: Error) {
+        
         // TODO: Handle correct Manager error
         self.state = .error(.NetworkError)
     }

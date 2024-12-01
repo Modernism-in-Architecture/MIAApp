@@ -11,24 +11,20 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @EnvironmentObject var tabController: TabController
+    @EnvironmentObject var router: MIARouter
     @EnvironmentObject var cloudKitBookmarksController: BookmarksViewModel
 
     var body: some View {
-        TabView(selection: $tabController.selection) {
-            BuildingsListView().tabItem {
-                Label("Buildings", systemImage: "building.2")
-            }.tag(TabController.Tab.buildings)
-            MIAMapView().tabItem {
-                Label("Places", systemImage: "map")
-            }.tag(TabController.Tab.map)
-            ArchitectsListView().tabItem {
-                Label("Architects", systemImage: "person.2")
-            }.tag(TabController.Tab.architects)
-            BookmarksView().tabItem {
-                Label("Bookmarks", systemImage: "bookmark")
-            }.tag(TabController.Tab.bookmarks)
-//                .badge(cloudKitBookmarksController.bookmarks.count)
+        
+        TabView(selection: $router.selectedTab) {
+            
+            ForEach(MIARouter.MainScreen.allCases) { tab in
+                
+                tab.rootView
+                    .toolbar(router.tabBarVisibility, for: .tabBar)
+                    .tag(tab as MIARouter.MainScreen)
+                    .tabItem { tab.label }
+            }
         }
     }
 }
@@ -36,6 +32,7 @@ struct ContentView: View {
 // MARK: - ContentView_Previews
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         ContentView()
     }

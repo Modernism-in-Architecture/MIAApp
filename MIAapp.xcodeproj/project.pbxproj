@@ -11,7 +11,7 @@
 		1103C27027BAD82A0064D1E5 /* MIAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C26F27BAD82A0064D1E5 /* MIAClient.swift */; };
 		1103C27227BAE41B0064D1E5 /* MIAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C27127BAE41B0064D1E5 /* MIAErrorView.swift */; };
 		1110E32D2843E2240037F65C /* BuildingSwipeGalleryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110E32C2843E2240037F65C /* BuildingSwipeGalleryImageView.swift */; };
-		111BB26E2842754000FF72F1 /* BuildingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BB26D2842754000FF72F1 /* BuildingDetailView.swift */; };
+		111BB26E2842754000FF72F1 /* BuildingDetailSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BB26D2842754000FF72F1 /* BuildingDetailSuccessView.swift */; };
 		111BB2702842AD5200FF72F1 /* BuildingsListSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BB26F2842AD5200FF72F1 /* BuildingsListSuccessView.swift */; };
 		111BB2722842B79F00FF72F1 /* MIAAsyncHeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BB2712842B79F00FF72F1 /* MIAAsyncHeaderImage.swift */; };
 		112CED0A27CE99E5007BE46B /* MIAToolBarLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CED0927CE99E5007BE46B /* MIAToolBarLogo.swift */; };
@@ -30,15 +30,15 @@
 		1168107027C1378100A62DD8 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168106F27C1378100A62DD8 /* TabController.swift */; };
 		118680DA27B5B0360008C589 /* MIAFoldableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118680D927B5B0360008C589 /* MIAFoldableText.swift */; };
 		11907CA327B30B8800CC5368 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA227B30B8800CC5368 /* LoadingState.swift */; };
-		11907CA527B30BCD00CC5368 /* ArchitectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA427B30BCD00CC5368 /* ArchitectDetailView.swift */; };
-		11907CA727B30C3F00CC5368 /* ArchitectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA627B30C3F00CC5368 /* ArchitectViewModel.swift */; };
+		11907CA527B30BCD00CC5368 /* ArchitectDetailSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA427B30BCD00CC5368 /* ArchitectDetailSuccessView.swift */; };
+		11907CA727B30C3F00CC5368 /* ArchitectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA627B30C3F00CC5368 /* ArchitectDetailViewModel.swift */; };
 		11A3E55427B4853800423B65 /* MIASection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3E55327B4853800423B65 /* MIASection.swift */; };
 		11A51910286A438400312486 /* BookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5190F286A438400312486 /* BookmarksView.swift */; };
 		11A51915286A515900312486 /* BookmarkToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A51914286A515900312486 /* BookmarkToolbarView.swift */; };
 		11A8471E2846A15C00AF68F4 /* ArchitectsListSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8471D2846A15C00AF68F4 /* ArchitectsListSuccessView.swift */; };
 		11A847202846AC2100AF68F4 /* MIASectionIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A8471F2846AC2100AF68F4 /* MIASectionIndexView.swift */; };
 		11A847222846D19600AF68F4 /* MIAShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A847212846D19600AF68F4 /* MIAShareView.swift */; };
-		11A847242846E84A00AF68F4 /* ArchitectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A847232846E84A00AF68F4 /* ArchitectView.swift */; };
+		11A847242846E84A00AF68F4 /* ArchitectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A847232846E84A00AF68F4 /* ArchitectDetailView.swift */; };
 		11AFF142288F40D200BD2ADC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AFF141288F40D200BD2ADC /* WidgetKit.framework */; };
 		11AFF144288F40D200BD2ADC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AFF143288F40D200BD2ADC /* SwiftUI.framework */; };
 		11AFF149288F40D400BD2ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AFF148288F40D400BD2ADC /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 		11AFF158288F5CE700BD2ADC /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FAA9B62725F3D200692DA3 /* Media.xcassets */; };
 		11C2032427B9C6A700C3D328 /* MIAActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2032327B9C6A700C3D328 /* MIAActivityIndicator.swift */; };
 		11C478A127973BF7001C9D21 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C478A027973BF7001C9D21 /* Secret.swift */; };
-		11C478A227974794001C9D21 /* BuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E2ED52722053C001B5F50 /* BuildingView.swift */; };
+		11C478A227974794001C9D21 /* BuildingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E2ED52722053C001B5F50 /* BuildingDetailView.swift */; };
 		11E5E5692847AF3D0021D22A /* MIASearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5E5682847AF3D0021D22A /* MIASearchBar.swift */; };
 		11E5E56B2847C1310021D22A /* MIASearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5E56A2847C1310021D22A /* MIASearchButton.swift */; };
 		11F55A04271C546800BF5E8E /* MIAappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F55A03271C546800BF5E8E /* MIAappApp.swift */; };
@@ -60,8 +60,14 @@
 		11F55A1C271CAD2A00BF5E8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F55A1B271CAD2A00BF5E8E /* Constants.swift */; };
 		11FAA9B52725DC8600692DA3 /* BuildingDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAA9B42725DC8600692DA3 /* BuildingDetailMapView.swift */; };
 		11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FAA9B62725F3D200692DA3 /* Media.xcassets */; };
+		DB16A2AA2CD538FB00FA296D /* ArchitectsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16A2A92CD538FB00FA296D /* ArchitectsHomeView.swift */; };
+		DB16A2AF2CD5811D00FA296D /* BuildingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16A2AE2CD5811D00FA296D /* BuildingsHomeView.swift */; };
+		DB1EF67F2CDADD720015A571 /* MIAMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1EF67E2CDADD720015A571 /* MIAMapViewModel.swift */; };
+		DB1EF6822CDD7E490015A571 /* BookmarksHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1EF6812CDD7E490015A571 /* BookmarksHomeView.swift */; };
 		DB20763B2A54A53600106FC0 /* MIAAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20763A2A54A53600106FC0 /* MIAAsyncImageView.swift */; };
 		DB20763D2A54A54800106FC0 /* MIAAsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20763C2A54A54800106FC0 /* MIAAsyncImageViewModel.swift */; };
+		DB2F34AF2BFA0CBA00433A4E /* MIARouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */; };
+		DB671C8F2CD68810002F78BD /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB671C8E2CD68810002F78BD /* MapHomeView.swift */; };
 		DB71E6882A58A34200315D11 /* BuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6872A58A34200315D11 /* BuildingsManager.swift */; };
 		DB71E68E2A597F4300315D11 /* APIBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E68D2A597F4300315D11 /* APIBuilding.swift */; };
 		DB71E6912A5980CB00315D11 /* BuildingsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6902A5980CB00315D11 /* BuildingsMapper.swift */; };
@@ -89,11 +95,19 @@
 		DB71E6F72A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
 		DB71E6F82A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
 		DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
+		DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
 		DBA2CA832B38A4CE003BF743 /* Building+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA822B38A4CE003BF743 /* Building+Mock.swift */; };
 		DBA2CA882B39B9ED003BF743 /* URL+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA872B39B9ED003BF743 /* URL+Mock.swift */; };
 		DBA2CA8C2B39BAFE003BF743 /* Schunck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBA2CA8B2B39BAFE003BF743 /* Schunck.jpg */; };
 		DBA2CA8E2B3DEDC2003BF743 /* BuildingDetail+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */; };
 		DBA2CA902B3E0E2C003BF743 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
+		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
+		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
+		DBD499A62C27423000C088BF /* ArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A62A5C841300315D11 /* ArchitectDetail.swift */; };
+		DBD499A72C27423300C088BF /* Architect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A42A5C80EC00315D11 /* Architect.swift */; };
+		DBD499A82C27428D00C088BF /* ArchitectsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A22A5C809F00315D11 /* ArchitectsMapper.swift */; };
+		DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E69E2A5C7A2A00315D11 /* APIArchitect.swift */; };
+		DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A02A5C7D1400315D11 /* APIArchitectDetail.swift */; };
 		DBEAD8252A5366DA009A9E9B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,7 +140,7 @@
 		1103C26F27BAD82A0064D1E5 /* MIAClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAClient.swift; sourceTree = "<group>"; };
 		1103C27127BAE41B0064D1E5 /* MIAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAErrorView.swift; sourceTree = "<group>"; };
 		1110E32C2843E2240037F65C /* BuildingSwipeGalleryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSwipeGalleryImageView.swift; sourceTree = "<group>"; };
-		111BB26D2842754000FF72F1 /* BuildingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailView.swift; sourceTree = "<group>"; };
+		111BB26D2842754000FF72F1 /* BuildingDetailSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailSuccessView.swift; sourceTree = "<group>"; };
 		111BB26F2842AD5200FF72F1 /* BuildingsListSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsListSuccessView.swift; sourceTree = "<group>"; };
 		111BB2712842B79F00FF72F1 /* MIAAsyncHeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAAsyncHeaderImage.swift; sourceTree = "<group>"; };
 		112CED0927CE99E5007BE46B /* MIAToolBarLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAToolBarLogo.swift; sourceTree = "<group>"; };
@@ -144,17 +158,17 @@
 		1163482E27245E0700547A28 /* BuildingDetailGridGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailGridGalleryView.swift; sourceTree = "<group>"; };
 		1168106F27C1378100A62DD8 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		118680D927B5B0360008C589 /* MIAFoldableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAFoldableText.swift; sourceTree = "<group>"; };
-		118E2ED52722053C001B5F50 /* BuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingView.swift; sourceTree = "<group>"; };
+		118E2ED52722053C001B5F50 /* BuildingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailView.swift; sourceTree = "<group>"; };
 		11907CA227B30B8800CC5368 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
-		11907CA427B30BCD00CC5368 /* ArchitectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailView.swift; sourceTree = "<group>"; };
-		11907CA627B30C3F00CC5368 /* ArchitectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectViewModel.swift; sourceTree = "<group>"; };
+		11907CA427B30BCD00CC5368 /* ArchitectDetailSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailSuccessView.swift; sourceTree = "<group>"; };
+		11907CA627B30C3F00CC5368 /* ArchitectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailViewModel.swift; sourceTree = "<group>"; };
 		11A3E55327B4853800423B65 /* MIASection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIASection.swift; sourceTree = "<group>"; };
 		11A5190F286A438400312486 /* BookmarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksView.swift; sourceTree = "<group>"; };
 		11A51914286A515900312486 /* BookmarkToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkToolbarView.swift; sourceTree = "<group>"; };
 		11A8471D2846A15C00AF68F4 /* ArchitectsListSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsListSuccessView.swift; sourceTree = "<group>"; };
 		11A8471F2846AC2100AF68F4 /* MIASectionIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIASectionIndexView.swift; sourceTree = "<group>"; };
 		11A847212846D19600AF68F4 /* MIAShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAShareView.swift; sourceTree = "<group>"; };
-		11A847232846E84A00AF68F4 /* ArchitectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectView.swift; sourceTree = "<group>"; };
+		11A847232846E84A00AF68F4 /* ArchitectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailView.swift; sourceTree = "<group>"; };
 		11AFF13F288F40D200BD2ADC /* MIAappWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MIAappWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AFF141288F40D200BD2ADC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		11AFF143288F40D200BD2ADC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -179,9 +193,16 @@
 		11F55A1B271CAD2A00BF5E8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11FAA9B42725DC8600692DA3 /* BuildingDetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailMapView.swift; sourceTree = "<group>"; };
 		11FAA9B62725F3D200692DA3 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		DB16A2A92CD538FB00FA296D /* ArchitectsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsHomeView.swift; sourceTree = "<group>"; };
+		DB16A2AE2CD5811D00FA296D /* BuildingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsHomeView.swift; sourceTree = "<group>"; };
 		DB1A58A92AE5C559007104E3 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		DB1EF67E2CDADD720015A571 /* MIAMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAMapViewModel.swift; sourceTree = "<group>"; };
+		DB1EF6812CDD7E490015A571 /* BookmarksHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksHomeView.swift; sourceTree = "<group>"; };
 		DB20763A2A54A53600106FC0 /* MIAAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAAsyncImageView.swift; sourceTree = "<group>"; };
 		DB20763C2A54A54800106FC0 /* MIAAsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAAsyncImageViewModel.swift; sourceTree = "<group>"; };
+		DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIARouter.swift; sourceTree = "<group>"; };
+		DB3CFCA22CDEDAFF000846BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB671C8E2CD68810002F78BD /* MapHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		DB71E6872A58A34200315D11 /* BuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsManager.swift; sourceTree = "<group>"; };
 		DB71E68D2A597F4300315D11 /* APIBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilding.swift; sourceTree = "<group>"; };
 		DB71E6902A5980CB00315D11 /* BuildingsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsMapper.swift; sourceTree = "<group>"; };
@@ -199,6 +220,7 @@
 		DBA2CA8B2B39BAFE003BF743 /* Schunck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schunck.jpg; sourceTree = "<group>"; };
 		DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildingDetail+Mock.swift"; sourceTree = "<group>"; };
 		DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +294,7 @@
 		11A5190E286A432500312486 /* BookmarksView */ = {
 			isa = PBXGroup;
 			children = (
+				DB1EF6812CDD7E490015A571 /* BookmarksHomeView.swift */,
 				11A5190F286A438400312486 /* BookmarksView.swift */,
 				1152194F289EDDB40090F324 /* BookmarksViewModel.swift */,
 				11A51914286A515900312486 /* BookmarkToolbarView.swift */,
@@ -279,14 +302,14 @@
 			path = BookmarksView;
 			sourceTree = "<group>";
 		};
-		11A8471C2846A0CA00AF68F4 /* ArchitectView */ = {
+		11A8471C2846A0CA00AF68F4 /* ArchitectDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				11907CA427B30BCD00CC5368 /* ArchitectDetailView.swift */,
-				11A847232846E84A00AF68F4 /* ArchitectView.swift */,
-				11907CA627B30C3F00CC5368 /* ArchitectViewModel.swift */,
+				11907CA427B30BCD00CC5368 /* ArchitectDetailSuccessView.swift */,
+				11A847232846E84A00AF68F4 /* ArchitectDetailView.swift */,
+				11907CA627B30C3F00CC5368 /* ArchitectDetailViewModel.swift */,
 			);
-			path = ArchitectView;
+			path = ArchitectDetailView;
 			sourceTree = "<group>";
 		};
 		11AFF140288F40D200BD2ADC /* Frameworks */ = {
@@ -324,6 +347,7 @@
 			children = (
 				113478A3272B2B7700C94E69 /* MIAMapPinView.swift */,
 				1131C910271DE67F00DE3FAA /* MIAMapView.swift */,
+				DB1EF67E2CDADD720015A571 /* MIAMapViewModel.swift */,
 			);
 			path = MIAMapView;
 			sourceTree = "<group>";
@@ -333,10 +357,10 @@
 			children = (
 				1163482E27245E0700547A28 /* BuildingDetailGridGalleryView.swift */,
 				11FAA9B42725DC8600692DA3 /* BuildingDetailMapView.swift */,
-				111BB26D2842754000FF72F1 /* BuildingDetailView.swift */,
+				111BB26D2842754000FF72F1 /* BuildingDetailSuccessView.swift */,
+				118E2ED52722053C001B5F50 /* BuildingDetailView.swift */,
 				1110E32C2843E2240037F65C /* BuildingSwipeGalleryImageView.swift */,
 				11E197BA27405DF800D1DADA /* BuildingSwipeGalleryView.swift */,
-				118E2ED52722053C001B5F50 /* BuildingView.swift */,
 				1163482A272438FB00547A28 /* BuildingViewModel.swift */,
 			);
 			path = BuildingView;
@@ -373,9 +397,11 @@
 				11F55A1B271CAD2A00BF5E8E /* Constants.swift */,
 				11F55A05271C546800BF5E8E /* ContentView.swift */,
 				1152BF7727A7399B004EBD97 /* Extensions.swift */,
+				DB3CFCA22CDEDAFF000846BA /* Info.plist */,
 				11F55A03271C546800BF5E8E /* MIAappApp.swift */,
 				11DCCE4A289EF4DF0086418D /* MIAappDebug.entitlements */,
 				11521951289EECCE0090F324 /* MIAappRelease.entitlements */,
+				DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */,
 				11C478A027973BF7001C9D21 /* Secret.swift */,
 				1168106F27C1378100A62DD8 /* TabController.swift */,
 			);
@@ -393,15 +419,34 @@
 		11F55A18271C5B8E00BF5E8E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				113BA80127AF56EE0033E0E6 /* ArchitectsListView */,
-				11A8471C2846A0CA00AF68F4 /* ArchitectView */,
+				DB16A2A72CD5365300FA296D /* Architects */,
 				11A5190E286A432500312486 /* BookmarksView */,
-				11B0ED88272DDD4600CA75FF /* BuildingsListView */,
-				11B0ED8A272DDE1400CA75FF /* BuildingView */,
-				11B0ED89272DDD6700CA75FF /* MIAMapView */,
+				DB16A2AD2CD5810300FA296D /* Buildings */,
+				DB671C8D2CD687E1002F78BD /* Map */,
 				11907CAA27B3296D00CC5368 /* shared */,
+				DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DB16A2A72CD5365300FA296D /* Architects */ = {
+			isa = PBXGroup;
+			children = (
+				11A8471C2846A0CA00AF68F4 /* ArchitectDetailView */,
+				113BA80127AF56EE0033E0E6 /* ArchitectsListView */,
+				DB16A2A92CD538FB00FA296D /* ArchitectsHomeView.swift */,
+			);
+			path = Architects;
+			sourceTree = "<group>";
+		};
+		DB16A2AD2CD5810300FA296D /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				11B0ED88272DDD4600CA75FF /* BuildingsListView */,
+				11B0ED8A272DDE1400CA75FF /* BuildingView */,
+				DB16A2AE2CD5811D00FA296D /* BuildingsHomeView.swift */,
+			);
+			path = Buildings;
 			sourceTree = "<group>";
 		};
 		DB1A58A22AE483DD007104E3 /* Assets */ = {
@@ -437,6 +482,15 @@
 				DB20763C2A54A54800106FC0 /* MIAAsyncImageViewModel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DB671C8D2CD687E1002F78BD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				11B0ED89272DDD6700CA75FF /* MIAMapView */,
+				DB671C8E2CD68810002F78BD /* MapHomeView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		DB71E68A2A597EE100315D11 /* Model */ = {
@@ -580,7 +634,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					11AFF13E288F40D200BD2ADC = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -616,6 +670,7 @@
 			files = (
 				11AFF149288F40D400BD2ADC /* Assets.xcassets in Resources */,
 				11AFF158288F5CE700BD2ADC /* Media.xcassets in Resources */,
+				DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +682,7 @@
 				11F55A1A271CACC900BF5E8E /* Colors.xcassets in Resources */,
 				11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */,
 				11F55A0B271C546C00BF5E8E /* Preview Assets.xcassets in Resources */,
+				DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */,
 				DBA2CA8C2B39BAFE003BF743 /* Schunck.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,8 +733,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB71E6EF2A641E8400315D11 /* API.swift in Sources */,
+				DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */,
+				DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */,
 				DB71E6F12A641EBF00315D11 /* APIBuilding.swift in Sources */,
 				DB71E6F22A641EEB00315D11 /* APIBuildingDetail.swift in Sources */,
+				DBD499A72C27423300C088BF /* Architect.swift in Sources */,
+				DBD499A62C27423000C088BF /* ArchitectDetail.swift in Sources */,
+				DBD499A82C27428D00C088BF /* ArchitectsMapper.swift in Sources */,
 				DB71E6E72A641C7C00315D11 /* Building.swift in Sources */,
 				DB71E6F02A641EA800315D11 /* BuildingDetail.swift in Sources */,
 				DB71E6EC2A641E3600315D11 /* BuildingsManager.swift in Sources */,
@@ -686,6 +747,7 @@
 				DB71E6EA2A641DA700315D11 /* Constants.swift in Sources */,
 				DB71E6F52A641FA500315D11 /* Error.swift in Sources */,
 				DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */,
+				DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */,
 				DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */,
 				DB71E6EE2A641E7100315D11 /* MIAClient.swift in Sources */,
 				DB71E6F32A641F2900315D11 /* MIAToolBarLogo.swift in Sources */,
@@ -705,14 +767,16 @@
 				DB71E6972A5B44F100315D11 /* APIBuildingDetail.swift in Sources */,
 				DB71E6A52A5C80EC00315D11 /* Architect.swift in Sources */,
 				DB71E6A72A5C841300315D11 /* ArchitectDetail.swift in Sources */,
-				11907CA527B30BCD00CC5368 /* ArchitectDetailView.swift in Sources */,
+				11907CA527B30BCD00CC5368 /* ArchitectDetailSuccessView.swift in Sources */,
+				11A847242846E84A00AF68F4 /* ArchitectDetailView.swift in Sources */,
+				11907CA727B30C3F00CC5368 /* ArchitectDetailViewModel.swift in Sources */,
+				DB16A2AA2CD538FB00FA296D /* ArchitectsHomeView.swift in Sources */,
 				11A8471E2846A15C00AF68F4 /* ArchitectsListSuccessView.swift in Sources */,
 				113BA80327AF57450033E0E6 /* ArchitectsListView.swift in Sources */,
 				113BA80027AF4F4C0033E0E6 /* ArchitectsListViewModel.swift in Sources */,
 				DB71E6AC2A63F1BB00315D11 /* ArchitectsManager.swift in Sources */,
 				DB71E6A32A5C809F00315D11 /* ArchitectsMapper.swift in Sources */,
-				11A847242846E84A00AF68F4 /* ArchitectView.swift in Sources */,
-				11907CA727B30C3F00CC5368 /* ArchitectViewModel.swift in Sources */,
+				DB1EF6822CDD7E490015A571 /* BookmarksHomeView.swift in Sources */,
 				11A51910286A438400312486 /* BookmarksView.swift in Sources */,
 				11521950289EDDB40090F324 /* BookmarksViewModel.swift in Sources */,
 				11A51915286A515900312486 /* BookmarkToolbarView.swift in Sources */,
@@ -722,7 +786,9 @@
 				DB71E69A2A5B459E00315D11 /* BuildingDetail.swift in Sources */,
 				1152BF7527A736A4004EBD97 /* BuildingDetailGridGalleryView.swift in Sources */,
 				11FAA9B52725DC8600692DA3 /* BuildingDetailMapView.swift in Sources */,
-				111BB26E2842754000FF72F1 /* BuildingDetailView.swift in Sources */,
+				111BB26E2842754000FF72F1 /* BuildingDetailSuccessView.swift in Sources */,
+				11C478A227974794001C9D21 /* BuildingDetailView.swift in Sources */,
+				DB16A2AF2CD5811D00FA296D /* BuildingsHomeView.swift in Sources */,
 				1131C90F271DC2B300DE3FAA /* BuildingsListCellView.swift in Sources */,
 				111BB2702842AD5200FF72F1 /* BuildingsListSuccessView.swift in Sources */,
 				11F55A17271C5A6400BF5E8E /* BuildingsListView.swift in Sources */,
@@ -731,7 +797,6 @@
 				DB71E6912A5980CB00315D11 /* BuildingsMapper.swift in Sources */,
 				1110E32D2843E2240037F65C /* BuildingSwipeGalleryImageView.swift in Sources */,
 				1152BF7627A737C4004EBD97 /* BuildingSwipeGalleryView.swift in Sources */,
-				11C478A227974794001C9D21 /* BuildingView.swift in Sources */,
 				1163482B272438FB00547A28 /* BuildingViewModel.swift in Sources */,
 				11F55A1C271CAD2A00BF5E8E /* Constants.swift in Sources */,
 				11F55A06271C546800BF5E8E /* ContentView.swift in Sources */,
@@ -740,6 +805,7 @@
 				DBEAD8252A5366DA009A9E9B /* ImageCacheManager.swift in Sources */,
 				11907CA327B30B8800CC5368 /* LoadingState.swift in Sources */,
 				DBA2CA902B3E0E2C003BF743 /* Logger.swift in Sources */,
+				DB671C8F2CD68810002F78BD /* MapHomeView.swift in Sources */,
 				11C2032427B9C6A700C3D328 /* MIAActivityIndicator.swift in Sources */,
 				11F55A04271C546800BF5E8E /* MIAappApp.swift in Sources */,
 				111BB2722842B79F00FF72F1 /* MIAAsyncHeaderImage.swift in Sources */,
@@ -750,6 +816,8 @@
 				118680DA27B5B0360008C589 /* MIAFoldableText.swift in Sources */,
 				113478A4272B2B7700C94E69 /* MIAMapPinView.swift in Sources */,
 				1131C911271DE67F00DE3FAA /* MIAMapView.swift in Sources */,
+				DB1EF67F2CDADD720015A571 /* MIAMapViewModel.swift in Sources */,
+				DB2F34AF2BFA0CBA00433A4E /* MIARouter.swift in Sources */,
 				11E5E5692847AF3D0021D22A /* MIASearchBar.swift in Sources */,
 				11E5E56B2847C1310021D22A /* MIASearchButton.swift in Sources */,
 				11A3E55427B4853800423B65 /* MIASection.swift in Sources */,
@@ -794,7 +862,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.modernism-in-architecture.MIAapp.MIAappWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -824,7 +892,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.modernism-in-architecture.MIAapp.MIAappWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -838,6 +906,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -900,6 +969,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -968,6 +1038,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MIAapp/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Um die Mapfunktionen zu nutzen";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -979,7 +1050,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.modernism-in-architecture.MIAapp";
 				PRODUCT_NAME = MIA;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1005,6 +1076,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MIAapp/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Um die Mapfunktionen zu nutzen";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1016,7 +1088,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.modernism-in-architecture.MIAapp";
 				PRODUCT_NAME = MIA;
 				PROVISIONING_PROFILE_SPECIFIER = "";

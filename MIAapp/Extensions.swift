@@ -16,10 +16,16 @@ extension URL: Identifiable {
     public var id: Self { self }
 }
 
-
-
 extension CLLocation {
+    
     convenience init(_ location: CLLocationCoordinate2D) {
         self.init(latitude: location.latitude, longitude: location.longitude)
+    }
+}
+
+extension CLLocationCoordinate2D {
+    
+    var debugDescription: String {
+        "coordinate latitude: \(self.latitude), longitude: \(self.longitude)"
     }
 }

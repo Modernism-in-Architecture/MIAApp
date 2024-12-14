@@ -11,9 +11,7 @@ import SwiftUI
 // MARK: - BuildingsListViewModel
 
 class BuildingsListViewModel: ObservableObject {
-    
-//    @EnvironmentObject var mapController: MIAMapViewModel
-    
+        
     @Published var state: LoadingState = .loading
     @Published var buildings: [Building] = []
     
@@ -45,6 +43,13 @@ extension BuildingsListViewModel {
     private func handleLoadError(error: Error) {
         // TODO: Handle correct Manager error
         self.state = .error(.NetworkError)
+    }
+}
+
+extension BuildingsListViewModel {
+    
+    func fetchBuildingFor(id: Int) async throws -> BuildingDetail {
+        try await buildingsMangager.getBuildingDetail(for: id)
     }
 }
 

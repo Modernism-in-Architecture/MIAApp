@@ -11,21 +11,21 @@ import OSLog
 
 struct BuildingDetailMapView: View {
     
-    @State var building: Building
+    @State var mapItem: MapItemProtocol
     
     var body: some View {
         
         let cameraPosition: MapCameraPosition = .camera(
-            MapCamera(centerCoordinate: building.coordinate, distance: 1000)
+            MapCamera(centerCoordinate: mapItem.coordinate, distance: 1000)
         )
         
         Map(initialPosition: cameraPosition) {
             
             Annotation(
-                building.name,
-                coordinate: building.coordinate
+                mapItem.name,
+                coordinate: mapItem.coordinate
             ) {
-                MIAMapPinView(building: building)
+                MIAMapPinView(previewImageURL: mapItem.feedImageURL)
             }
         }
     }
@@ -34,5 +34,5 @@ struct BuildingDetailMapView: View {
 // MARK: - Preview
 
 #Preview {
-    BuildingDetailMapView(building: .schunckMock)
+    BuildingDetailMapView(mapItem: BuildingDetail.schunckMock)
 }

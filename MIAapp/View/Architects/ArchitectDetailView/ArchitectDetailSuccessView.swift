@@ -64,12 +64,10 @@ struct ArchitectDetailSuccessView: View {
         LazyVGrid(columns: columns, alignment:.leading, spacing: 20) {
             
             ForEach(detail.relatedBuildings) { building in
-//                NavigationLink(destination: BuildingDetailView(building: building)) {
-//                    BuildingsListCellView(building: building, searchText: "")
-//                }
+
                 BuildingsListCellView(building: building, searchText: "")
                     .onTapGesture {
-                        router.showBuildingDetail(building: building)
+                        router.showBuildingDetail(id: building.id)
                     }
                 .buttonStyle(.plain)
             }

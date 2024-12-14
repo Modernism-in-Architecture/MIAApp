@@ -5,8 +5,7 @@
 //  Created by Sören Kirchner (privat) on 09.07.23.
 //
 
-import Foundation
-import UIKit
+import MapKit
 
 struct BuildingDetail: Decodable {
     
@@ -20,6 +19,7 @@ struct BuildingDetail: Decodable {
     let cityCountry: String
     let latitude: Double
     let longitude: Double
+    let feedImageURL: URL?
     let galleryImages: [URL]
     let subtitle: String
     let todaysUse: String
@@ -31,12 +31,11 @@ struct BuildingDetail: Decodable {
     
     let attributedDescription: AttributedString
     let attributedHistory: AttributedString
+}
+
+extension BuildingDetail: MapItemProtocol {
     
-//    struct Architect: Decodable, Identifiable {
-//        
-//        let id: Int
-//        let lastName: String
-//        let firstName: String
-//        let fullName: String
-//    }
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
 }

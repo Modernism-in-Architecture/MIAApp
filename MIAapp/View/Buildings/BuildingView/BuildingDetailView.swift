@@ -16,17 +16,13 @@ struct BuildingDetailView: View {
     var buildingDetailViewModel = BuildingViewModel()
     
     @State
-    var building: Building
+    var id: Int
         
     var body: some View {
         
         content
             .task {
-//                let clock = ContinuousClock()
-//                let elapsedTime = await clock.measure {
-                    await buildingDetailViewModel.fetchData(for: building.id)
-//                }
-//                Logger.buildingDetail.debug("Time elapsed loading Detail: \(elapsedTime)")
+                await buildingDetailViewModel.fetchData(for: id)
             }
     }
 }
@@ -39,7 +35,7 @@ extension BuildingDetailView {
         switch buildingDetailViewModel.detail {
             
         case .success(let detail):
-            BuildingDetailSuccessView(building: building, buildingDetail: detail)
+            BuildingDetailSuccessView(buildingDetail: detail)
             
         case .loading:
             MIAActivityIndicator()

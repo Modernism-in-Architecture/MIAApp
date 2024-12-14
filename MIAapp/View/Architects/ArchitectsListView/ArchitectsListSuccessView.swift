@@ -51,7 +51,7 @@ struct ArchitectsListSuccessView: View {
 //                                        }
                                         Text("\(architect.fullName)")
                                             .onTapGesture {
-                                                router.showArchitectDetail(architect: architect)
+                                                router.showArchitectDetail(id: architect.id)
                                             }
                                     }
                                 }

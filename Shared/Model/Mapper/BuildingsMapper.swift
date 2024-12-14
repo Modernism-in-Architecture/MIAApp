@@ -48,7 +48,8 @@ extension BuildingsMapper {
             country: data.country,
             cityCountry: [data.city, data.country].filter{ !$0.isEmpty }.joined(separator: ", "),
             latitude: data.latitude,
-            longitude: data.longitude,
+            longitude: data.longitude, 
+            feedImageURL: URL(string: data.feedImage),
             galleryImages: data.galleryImages.compactMap(URL.init(string:)),
             subtitle: data.subtitle,
             todaysUse: data.todaysUse,
@@ -57,8 +58,6 @@ extension BuildingsMapper {
             architects: data.architects.map(map),
             absoluteURL: URL(string: data.absoluteURL)!,
             buildingType: data.buildingType,
-//            attributedDescription: data.description.fromHtmlToAttributed(),
-//            attributedHistory: data.history.fromHtmlToAttributed()
             attributedDescription: data.descriptionMarkdown.fromMarkdownToAttributedString,
             attributedHistory: data.historyMarkdown.fromMarkdownToAttributedString
         )

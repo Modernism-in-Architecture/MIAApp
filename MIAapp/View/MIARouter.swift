@@ -11,16 +11,20 @@ import OSLog
 
 class MIARouter: ObservableObject {
     
+    private var buildingsMangager = BuildingsManager()
+    
     @Published
     var path = NavigationPath()
     
     @Published
     var selectedTab: MainScreen = .buildings
     
+    var deepLinkTarget: URL? = .none
+    
     @Published
     private(set) var tabBarVisibility: Visibility = .visible
     
-    private(set) var selectedBuildingForMap: Building = .empty
+    private(set) var selectedBuildingForMap: MapItemProtocol? = .none
         
     private var subscribers = Set<AnyCancellable>()
     
@@ -53,20 +57,32 @@ class MIARouter: ObservableObject {
     
     enum DetailsRoute: Hashable {
         
-        case architect(architect: Architect)
-        case building(building: Building)
+        case architect(id: Int)
+        case building(id: Int)
         
         @ViewBuilder
         var view: some View {
             
             switch self {
-            case let .architect(architect):
-                ArchitectDetailView(id: architect.id)
+            case let .architect(id):
+                ArchitectDetailView(id: id)
                 
-            case let .building(building):
-                BuildingDetailView(building: building)
+            case let .building(id):
+                BuildingDetailView(id: id)
             }
         }
+    }
+}
+
+extension MIARouter {
+    
+    var deepLinkBuildingId: Int? {
+        
+        defer {
+            self.deepLinkTarget = .none
+        }
+        
+        return (self.deepLinkTarget?.lastPathComponent).flatMap { Int($0) }
     }
 }
 
@@ -95,29 +111,30 @@ extension MIARouter {
         }
     }
     
-    func showBuildingDetail(building: Building) {
+    func showBuildingDetail(id: Int) {
         
         hideTabbar()
-        path.append(DetailsRoute.building(building: building))
+        path.append(DetailsRoute.building(id: id))
     }
     
-    func showArchitectDetail(architect: Architect) {
+    func showArchitectDetail(id: Int) {
         
         hideTabbar()
-        path.append(DetailsRoute.architect(architect: architect))
+        path.append(DetailsRoute.architect(id: id))
     }
     
-    func showMap(with building: Building) {
+    func showMap(with item: MapItemProtocol) {
         
         toRoot()
-        selectedBuildingForMap = building
+        selectedBuildingForMap = item
         selectedTab = .map
     }
     
-    func switchToBuildingsAndShowDetail(for building: Building) {
+    func checkDeepLinkTarget() {
         
-        selectedTab = .buildings
-        showBuildingDetail(building: building)
+        if let id = deepLinkBuildingId {
+            showBuildingDetail(id: id)
+        }
     }
 }
 

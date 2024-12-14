@@ -37,7 +37,7 @@ struct BookmarksView: View {
                             .lineLimit(1)
                     }
                     .onTapGesture {
-                        router.showBuildingDetail(building: building)
+                        router.showBuildingDetail(id: building.id)
                     }
                 }
                 .onDelete(perform: delete)

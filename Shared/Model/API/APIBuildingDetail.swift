@@ -29,6 +29,7 @@ extension APIBuildingDetail {
         let country: String
         let latitude: Double
         let longitude: Double
+        let feedImage: String
         let galleryImages: [String]
         let subtitle: String
         let todaysUse: String

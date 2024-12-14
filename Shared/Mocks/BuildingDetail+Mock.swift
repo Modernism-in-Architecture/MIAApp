@@ -20,6 +20,7 @@ extension BuildingDetail {
         cityCountry: "Heerlen, Netherlands",
         latitude: 50.88785218450188,
         longitude: 5.979353076537301,
+        feedImageURL: URL(string: "https://modernism.s3.amazonaws.com/original_images/thumbs/Schunck.jpg.1200x0_q60.jpg"),
         galleryImages: [
             "https://modernism.s3.amazonaws.com/original_images/thumbs/Schunck.jpg.1200x0_q60.jpg",
             "https://modernism.s3.amazonaws.com/original_images/thumbs/IMG_20231030_170051777_HDR.jpg.1200x0_q60.jpg",

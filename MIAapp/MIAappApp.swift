@@ -15,7 +15,7 @@ struct MIAappApp: App {
     @StateObject var mapViewModel = MIAMapViewModel()
     @StateObject var architectsListViewModel = ArchitectsListViewModel()
     @StateObject var cloudKitBookmarksController = BookmarksViewModel()
-
+    
     var body: some Scene {
         
         WindowGroup {
@@ -32,7 +32,8 @@ struct MIAappApp: App {
                     await architectsListViewModel.fetchData()
                 }
                 .onOpenURL { url in
-                    print("Received deep link: \(url)")
+                    router.deepLinkTarget = url
+                    router.checkDeepLinkTarget()
                 }
         }
     }

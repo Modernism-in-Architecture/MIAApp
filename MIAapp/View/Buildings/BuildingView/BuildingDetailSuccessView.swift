@@ -21,10 +21,6 @@ struct BuildingDetailSuccessView: View {
     @EnvironmentObject
     var mapViewModel: MIAMapViewModel
     
-    // TODO: - Remove
-    @State
-    var building: Building
-    
     @State
     var buildingDetail: BuildingDetail
     
@@ -37,10 +33,6 @@ struct BuildingDetailSuccessView: View {
     var body: some View {
         
         content
-            .onAppear {
-                Logger.buildingDetail.debug("debug")
-                Logger.buildingDetail.debug("\(building.coordinate.debugDescription)")
-            }
     }
 }
 
@@ -54,18 +46,18 @@ private extension BuildingDetailSuccessView {
             
             VStack(alignment: .leading) {
                 
-                MIAAsyncHeaderImage(url: building.feedImage)
+                MIAAsyncHeaderImage(url: buildingDetail.feedImageURL)
                 details
                     .padding()
             }
         }
         .padding(.top, 10)
-        .navigationTitle(building.name)
+        .navigationTitle(buildingDetail.name)
         .toolbar {
             
             HStack {
                 
-                BookmarkToolbarView(id: building.id)
+                BookmarkToolbarView(id: buildingDetail.id)
                 MIAShareView(url: buildingDetail.absoluteURL)
             }
         }
@@ -130,7 +122,7 @@ private extension BuildingDetailSuccessView {
             Text(architect.fullName)
                 .underline()
                 .onTapGesture {
-                    router.showArchitectDetail(architect: architect)
+                    router.showArchitectDetail(id: architect.id)
                 }
                 .buttonStyle(.plain)
         }
@@ -140,24 +132,28 @@ private extension BuildingDetailSuccessView {
         
         ZStack {
             
-            BuildingDetailMapView(building: building)
+            BuildingDetailMapView(mapItem: buildingDetail)
                 .frame(height: 250)
                 .mask(RoundedRectangle(cornerRadius: 10))
                 .padding(.top, 5)
                 .allowsHitTesting(false) // No Interaction
             Color.clear
                 .contentShape(Rectangle())
-                .onTapGesture {
-                    
-                    print("Tapped")
-                    mapViewModel.setCameraPosition(to: building)
-                    router.toRoot()
-                    router.showMap(with: building)
-                }
+                .onTapGesture(perform: showItemOnMap)
         }
     }
 }
 
-#Preview {
-    BuildingDetailSuccessView(building: .schunckMock, buildingDetail: .schunckMock)
+private extension BuildingDetailSuccessView {
+    
+    func showItemOnMap() {
+        
+        mapViewModel.setCameraPosition(to: buildingDetail)
+        router.toRoot()
+        router.showMap(with: buildingDetail)
+    }
 }
+
+//#Preview {
+//    BuildingDetailSuccessView(building: .schunckMock, buildingDetail: .schunckMock)
+//}

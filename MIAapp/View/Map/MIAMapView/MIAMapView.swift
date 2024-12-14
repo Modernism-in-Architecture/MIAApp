@@ -11,6 +11,7 @@ import SwiftUI
 
 // MARK: - MIAMapView
 
+// TODO: Cleanup and Format this File
 struct MIAMapView: View {
     
     // MARK: - Properties
@@ -62,12 +63,10 @@ struct MIAMapView: View {
                 
                 Annotation(building.name, coordinate: building.coordinate) {
                     
-                    MIAMapPinView(building: building, showShadow: showPinShadow)
+                    MIAMapPinView(previewImageURL: building.feedImage, showShadow: showPinShadow)
                     
                         .onTapGesture {
-                            
-                            Logger.map.debug("Building \(building.id) selected.")
-                            router.showBuildingDetail(building: building)
+                            router.showBuildingDetail(id: building.id)
                         }
                 }
             }
@@ -91,7 +90,6 @@ struct MIAMapView: View {
         .onMapCameraChange(frequency: .continuous) { context in
             
             self.showPinShadow = context.camera.distance < .shadowDistanceLimit
-            Logger.map.debug("Update Map \(context.camera.distance)")
         }
     }
 }

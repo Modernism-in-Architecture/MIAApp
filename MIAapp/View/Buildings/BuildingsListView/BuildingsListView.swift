@@ -9,14 +9,29 @@ import SwiftUI
 
 struct BuildingsListView: View {
     
-    @EnvironmentObject var buildingsController: BuildingsListViewModel
+    @EnvironmentObject 
+    var buildingsViewModel: BuildingsListViewModel
+    
+    @EnvironmentObject
+    var router: MIARouter
 
     var body: some View {
         
-        switch buildingsController.state {
+        content
+    }
+}
+
+// MARK: - Views
+
+extension BuildingsListView {
+    
+    @ViewBuilder
+    var content: some View {
+        
+        switch buildingsViewModel.state {
             
         case .success:
-            BuildingsListSuccessView(buildings: buildingsController.buildings)
+            BuildingsListSuccessView(buildings: buildingsViewModel.buildings)
             
         case .loading:
             MIAActivityIndicator()

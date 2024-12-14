@@ -10,6 +10,7 @@ import OSLog
 
 // MARK: - BuildingsManager
 
+// TODO: Cleanup and Format this File
 class BuildingsManager {
 
     let mapper = BuildingsMapper()

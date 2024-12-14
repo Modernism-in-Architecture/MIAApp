@@ -135,6 +135,7 @@ struct MIAappWidgetEntryView: View {
                 infoArea
             }
             .containerBackground(for: .widget) {}
+            .widgetURL(URL(string: "MIAApp://building/\(entry.id)"))
         }
     }
 }
@@ -198,6 +199,7 @@ struct MIAappWidget: Widget {
         
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             MIAappWidgetEntryView(entry: entry)
+                .widgetURL(URL(string: "MIAApp://building/\(entry.id)"))
         }
         .configurationDisplayName("MIA App Widget")
         .description("Modernism in Architecture")

@@ -17,7 +17,7 @@ class MIAMapViewModel: ObservableObject {
 //        cameraPosition = .camera(.init(centerCoordinate: location, distance: .defaultCameraDistance))
 //    }
     
-    func setCameraPosition(to building: Building) {
-        cameraPosition = .camera(.init(centerCoordinate: building.coordinate, distance: .defaultCameraDistance))
+    func setCameraPosition(to mapItem: MapItemProtocol) {
+        cameraPosition = .camera(.init(centerCoordinate: mapItem.coordinate, distance: .defaultCameraDistance))
     }
 }

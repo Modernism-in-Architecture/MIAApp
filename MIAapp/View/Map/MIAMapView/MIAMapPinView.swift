@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MIAMapPinView: View {
     
-    let building: Building
+    let previewImageURL: URL?
     
     var showShadow = false
     
@@ -21,7 +21,7 @@ struct MIAMapPinView: View {
         
         ZStack {
             
-            MIAAsyncImageView(building.previewImage)
+            MIAAsyncImageView(previewImageURL)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .overlay(Circle().stroke(Color(.imageCircle), lineWidth: strokeSize))
                 .shadow(radius: showShadow ? 5 : 0)
@@ -31,5 +31,5 @@ struct MIAMapPinView: View {
 }
 
 #Preview {
-    MIAMapPinView(building: .schunckMock)
+    MIAMapPinView(previewImageURL: Building.schunckMock.feedImage)
 }

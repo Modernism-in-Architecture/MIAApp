@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - ArchitectsListSuccessView
+
 struct ArchitectsListSuccessView: View {
     
     @EnvironmentObject
@@ -20,70 +22,141 @@ struct ArchitectsListSuccessView: View {
     @State var isKeyboardShowing = false
 
     var body: some View {
-        
-        @ObservedObject
-        var router = self.router
-                    
-        let groupedArchitects = groupedArchitects
+        content
+    }
+}
+
+// MARK: - Views
+
+private extension ArchitectsListSuccessView {
+    
+    var content: some View {
             
         VStack {
-                
+            
+            @ObservedObject
+            var router = self.router
+                        
             if isSearching {
                 MIASearchBar(text: $searchText, isSearching: $isSearching)
             }
                 
+            ArchitectsGroupedListView(
+                router: router,
+                isSearching: $isSearching,
+                groupedArchitects: groupedArchitects
+            )
+            .toolbar { toolbar }
+            .navigationTitle("Architects")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    @ToolbarContentBuilder
+    var toolbar: some ToolbarContent {
+        
+        ToolbarItem(placement: .navigationBarLeading) {
+            MIAToolBarLogo()
+        }
+        ToolbarItem(placement: .navigationBarTrailing) {
+            MIASearchButton(isSearching: $isSearching)
+        }
+    }
+}
+
+// MARK: - Views (structs)
+
+private extension ArchitectsListSuccessView {
+    
+    struct ArchitectsGroupedListView: View {
+        
+        @ObservedObject
+        var router: MIARouter
+        
+        @Binding
+        var isSearching: Bool
+
+        let groupedArchitects: [String: [Architect]]
+        
+        var body: some View {
+            
             ScrollViewReader { proxy in
-                    
+                
                 ZStack {
-                        
-                    List {
-                            
-                        ForEach(groupedArchitects.keys.sorted(), id: \.self) { key in
-                                
-                            Section(header: Text("\(key)")) {
-                                    
-                                if let architects = groupedArchitects[key] {
-                                        
-                                    ForEach(architects) { architect in
-                                            
-//                                        NavigationLink(value: MIARouter.ArchitectRoute.detail(architect: architect)) {
-//                                            Text("\(architect.fullName)")
-//                                        }
-                                        Text("\(architect.fullName)")
-                                            .onTapGesture {
-                                                router.showArchitectDetail(id: architect.id)
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .disableAutocorrection(true)
-                    .listStyle(.insetGrouped)
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                            
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            MIAToolBarLogo()
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            MIASearchButton(isSearching: $isSearching)
-                        }
-                    }
+                    
+                    ArchitectsGroupedListContentView(router: router, groupedArchitects: groupedArchitects)
+
                     if !isSearching {
                         MIASectionIndexView(scrollViewProxy: proxy, keys: groupedArchitects.keys.sorted())
                     }
                 }
-                .onAppear {
-                        
-                    if let firstIndex = groupedArchitects.keys.sorted().first {
-                        proxy.scrollTo(firstIndex, anchor: .top)
-                    }
-                }
-                .navigationTitle("Architects")
             }
         }
     }
+    
+    struct ArchitectsGroupedListContentView: View {
+        
+        @ObservedObject
+        var router: MIARouter
+        
+        let groupedArchitects: [String: [Architect]]
+        
+        var body: some View {
+            
+            List {
+                
+                ForEach(groupedArchitects.keys.sorted(), id: \.self) { sectionKey in
+                
+                    ArchitectsGroupedListSectionView(
+                        router: router,
+                        sectionKey: sectionKey,
+                        architects: groupedArchitects[sectionKey] ?? []
+                    )
+                }
+            }
+            .listStyle(.insetGrouped)
+        }
+    }
+    
+    struct ArchitectsGroupedListSectionView: View {
+        
+        @ObservedObject
+        var router: MIARouter
+        
+        let sectionKey: String
+        let architects: [Architect]
+        
+        var body: some View {
+            
+            Section(header: Text("\(sectionKey)")) {
+                    
+                ForEach(architects) { architect in
+                    ArchitectsGroupedListRowView(router: router, architect: architect)
+                }
+            }
+        }
+    }
+    
+    struct ArchitectsGroupedListRowView: View {
+        
+        @ObservedObject
+        var router: MIARouter
+        
+        let architect: Architect
+        
+        var body: some View {
+            
+            Text("\(architect.fullName)")
+                .onTapGesture {
+                    router.showArchitectDetail(id: architect.id)
+                }
+        }
+    }
+}
+
+// MARK: - Computed Properties
+
+private extension ArchitectsListSuccessView {
     
     var searchResults: [Architect] {
         
@@ -107,8 +180,31 @@ struct ArchitectsListSuccessView: View {
     }
 }
 
-// struct ArchitectListSuccessView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ArchitectListSuccessView()
-//    }
-// }
+// MARK: - Previews
+
+#Preview("Light") {
+
+    let viewModel = ArchitectsListViewModel()
+    
+    Task {
+        await viewModel.fetchData()
+    }
+    
+    return ArchitectsListSuccessView()
+        .environmentObject(MIARouter())
+        .environmentObject(viewModel)
+}
+
+#Preview("Dark") {
+
+    let viewModel = ArchitectsListViewModel()
+    
+    Task {
+        await viewModel.fetchData()
+    }
+    
+    return ArchitectsListSuccessView()
+        .environmentObject(MIARouter())
+        .environmentObject(viewModel)
+        .preferredColorScheme(.dark)
+}

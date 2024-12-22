@@ -43,6 +43,7 @@ struct MIASearchBar: View {
                 }
             })
         }
+        .disableAutocorrection(true)
         .padding()
         .onAppear() {
             isFocused = true

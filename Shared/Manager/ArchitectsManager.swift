@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MIANetworking
 
 class ArchitectsManager {
     
@@ -13,7 +14,7 @@ class ArchitectsManager {
     
     func getArchitects() async throws -> [Architect] {
         
-        let result = await MIAClient.fetch(API.request(for: API.architects))
+        let result = await MIAClient.fetch(.architects)
         
         switch result {
         case let .success(data):
@@ -32,7 +33,7 @@ class ArchitectsManager {
     
     func getArchitectDetail(for id: Int) async throws -> ArchitectDetail {
         
-        let result = await MIAClient.fetch(API.request(for: API.architect(for: id)))
+        let result = await MIAClient.fetch(.architect(id: id))
         
         switch result {
         case .success(let data):

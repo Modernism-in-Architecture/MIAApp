@@ -10,7 +10,7 @@ import OSLog
 
 // MARK: - MIAClient
 
-class MIAClient {
+public final class MIAClient {
 
     private static let session = URLSession.shared
     
@@ -22,7 +22,7 @@ class MIAClient {
             
             let (data, response) = try await session.data(for: request, delegate: nil)
             
-            Logger.client.debug("\(request.description) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
+//            Logger.client.debug("\(request.description) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
             
             guard let response = response as? HTTPURLResponse else {
                 return .failure(.InternalError(GenericError(message: "not a HTTPURLResponse")))
@@ -32,6 +32,15 @@ class MIAClient {
         } catch {
             return .failure(.InternalError(GenericError(message: error.localizedDescription)))
         }
+    }
+    
+    public static func fetch(_ request: MIARequest) async -> Result<ClientResult, ClientError> {
+        
+        guard let urlRequest = request.request else {
+            return .failure(.InternalError(.init(message: "Wrong Url")))
+        }
+        
+        return await fetch(request)
     }
     
     private static func checkStatusCode(_ response: HTTPURLResponse, _ data: Data) -> Result<ClientResult, ClientError> {
@@ -57,7 +66,7 @@ class MIAClient {
 
 extension MIAClient {
 
-    static func downloadImage(from url: URL?) async -> Result<UIImage, ClientError> {
+    public static func downloadImage(from url: URL?) async -> Result<UIImage, ClientError> {
         
         guard let url else {
             return .failure(.InternalError(.init(message: "Image Url corrupted")))
@@ -106,15 +115,15 @@ extension MIAClient {
 
 // MARK: - ClientResult
 
-struct ClientResult {
+public struct ClientResult {
     
-    let data: Data
+    public let data: Data
     let respone: HTTPURLResponse
 }
 
 // MARK: - ClientError
 
-enum ClientError: Error {
+public enum ClientError: Error {
     
     case HTTPClientError(HTTPURLResponse)
     case HTTPServerError(HTTPURLResponse)
@@ -124,6 +133,6 @@ enum ClientError: Error {
 
 // MARK: - GenericError
 
-struct GenericError: Error {
+public struct GenericError: Error {
     let message: String
 }

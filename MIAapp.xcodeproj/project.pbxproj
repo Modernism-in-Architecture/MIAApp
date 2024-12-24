@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1103C26E27BAD7570064D1E5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C26D27BAD7570064D1E5 /* Error.swift */; };
-		1103C27027BAD82A0064D1E5 /* MIAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C26F27BAD82A0064D1E5 /* MIAClient.swift */; };
 		1103C27227BAE41B0064D1E5 /* MIAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C27127BAE41B0064D1E5 /* MIAErrorView.swift */; };
 		1110E32D2843E2240037F65C /* BuildingSwipeGalleryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1110E32C2843E2240037F65C /* BuildingSwipeGalleryImageView.swift */; };
 		111BB26E2842754000FF72F1 /* BuildingDetailSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BB26D2842754000FF72F1 /* BuildingDetailSuccessView.swift */; };
@@ -22,14 +20,12 @@
 		113BA80327AF57450033E0E6 /* ArchitectsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113BA80227AF57450033E0E6 /* ArchitectsListView.swift */; };
 		11521950289EDDB40090F324 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152194F289EDDB40090F324 /* BookmarksViewModel.swift */; };
 		11521954289EECD50090F324 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11521953289EECD50090F324 /* CloudKit.framework */; };
-		1152BF7427A70D47004EBD97 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152BF7327A70D47004EBD97 /* API.swift */; };
 		1152BF7527A736A4004EBD97 /* BuildingDetailGridGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163482E27245E0700547A28 /* BuildingDetailGridGalleryView.swift */; };
 		1152BF7627A737C4004EBD97 /* BuildingSwipeGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E197BA27405DF800D1DADA /* BuildingSwipeGalleryView.swift */; };
 		1152BF7827A7399B004EBD97 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152BF7727A7399B004EBD97 /* Extensions.swift */; };
 		1163482B272438FB00547A28 /* BuildingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163482A272438FB00547A28 /* BuildingViewModel.swift */; };
 		1168107027C1378100A62DD8 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168106F27C1378100A62DD8 /* TabController.swift */; };
 		118680DA27B5B0360008C589 /* MIAFoldableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118680D927B5B0360008C589 /* MIAFoldableText.swift */; };
-		11907CA327B30B8800CC5368 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA227B30B8800CC5368 /* LoadingState.swift */; };
 		11907CA527B30BCD00CC5368 /* ArchitectDetailSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA427B30BCD00CC5368 /* ArchitectDetailSuccessView.swift */; };
 		11907CA727B30C3F00CC5368 /* ArchitectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11907CA627B30C3F00CC5368 /* ArchitectDetailViewModel.swift */; };
 		11A3E55427B4853800423B65 /* MIASection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3E55327B4853800423B65 /* MIASection.swift */; };
@@ -86,17 +82,13 @@
 		DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AFF146288F40D200BD2ADC /* MIAappWidget.swift */; };
 		DB71E6EC2A641E3600315D11 /* BuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6872A58A34200315D11 /* BuildingsManager.swift */; };
 		DB71E6ED2A641E4700315D11 /* BuildingsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6902A5980CB00315D11 /* BuildingsMapper.swift */; };
-		DB71E6EE2A641E7100315D11 /* MIAClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C26F27BAD82A0064D1E5 /* MIAClient.swift */; };
-		DB71E6EF2A641E8400315D11 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152BF7327A70D47004EBD97 /* API.swift */; };
 		DB71E6F02A641EA800315D11 /* BuildingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6992A5B459E00315D11 /* BuildingDetail.swift */; };
 		DB71E6F12A641EBF00315D11 /* APIBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E68D2A597F4300315D11 /* APIBuilding.swift */; };
 		DB71E6F22A641EEB00315D11 /* APIBuildingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6962A5B44F100315D11 /* APIBuildingDetail.swift */; };
 		DB71E6F32A641F2900315D11 /* MIAToolBarLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CED0927CE99E5007BE46B /* MIAToolBarLogo.swift */; };
 		DB71E6F42A641F6F00315D11 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C478A027973BF7001C9D21 /* Secret.swift */; };
-		DB71E6F52A641FA500315D11 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103C26D27BAD7570064D1E5 /* Error.swift */; };
 		DB71E6F72A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
 		DB71E6F82A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6F62A64201C00315D11 /* String+fromHtmlToAttributed.swift */; };
-		DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
 		DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
 		DBA2CA832B38A4CE003BF743 /* Building+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA822B38A4CE003BF743 /* Building+Mock.swift */; };
 		DBA2CA882B39B9ED003BF743 /* URL+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA872B39B9ED003BF743 /* URL+Mock.swift */; };
@@ -105,12 +97,14 @@
 		DBA2CA902B3E0E2C003BF743 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */; };
 		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
 		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
+		DBC7CBC52D18F0CE008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBC42D18F0CE008BB12E /* MIANetworking */; };
+		DBC7CBC72D18F0E2008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBC62D18F0E2008BB12E /* MIANetworking */; };
+		DBC7CBC92D18F113008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBC82D18F113008BB12E /* MIANetworking */; };
 		DBD499A62C27423000C088BF /* ArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A62A5C841300315D11 /* ArchitectDetail.swift */; };
 		DBD499A72C27423300C088BF /* Architect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A42A5C80EC00315D11 /* Architect.swift */; };
 		DBD499A82C27428D00C088BF /* ArchitectsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A22A5C809F00315D11 /* ArchitectsMapper.swift */; };
 		DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E69E2A5C7A2A00315D11 /* APIArchitect.swift */; };
 		DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB71E6A02A5C7D1400315D11 /* APIArchitectDetail.swift */; };
-		DBEAD8252A5366DA009A9E9B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,8 +132,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1103C26D27BAD7570064D1E5 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		1103C26F27BAD82A0064D1E5 /* MIAClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAClient.swift; sourceTree = "<group>"; };
 		1103C27127BAE41B0064D1E5 /* MIAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAErrorView.swift; sourceTree = "<group>"; };
 		1110E32C2843E2240037F65C /* BuildingSwipeGalleryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingSwipeGalleryImageView.swift; sourceTree = "<group>"; };
 		111BB26D2842754000FF72F1 /* BuildingDetailSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailSuccessView.swift; sourceTree = "<group>"; };
@@ -154,14 +146,12 @@
 		1152194F289EDDB40090F324 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		11521951289EECCE0090F324 /* MIAappRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MIAappRelease.entitlements; sourceTree = "<group>"; };
 		11521953289EECD50090F324 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		1152BF7327A70D47004EBD97 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1152BF7727A7399B004EBD97 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1163482A272438FB00547A28 /* BuildingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewModel.swift; sourceTree = "<group>"; };
 		1163482E27245E0700547A28 /* BuildingDetailGridGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailGridGalleryView.swift; sourceTree = "<group>"; };
 		1168106F27C1378100A62DD8 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		118680D927B5B0360008C589 /* MIAFoldableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAFoldableText.swift; sourceTree = "<group>"; };
 		118E2ED52722053C001B5F50 /* BuildingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailView.swift; sourceTree = "<group>"; };
-		11907CA227B30B8800CC5368 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		11907CA427B30BCD00CC5368 /* ArchitectDetailSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailSuccessView.swift; sourceTree = "<group>"; };
 		11907CA627B30C3F00CC5368 /* ArchitectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectDetailViewModel.swift; sourceTree = "<group>"; };
 		11A3E55327B4853800423B65 /* MIASection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIASection.swift; sourceTree = "<group>"; };
@@ -224,7 +214,8 @@
 		DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildingDetail+Mock.swift"; sourceTree = "<group>"; };
 		DBA2CA8F2B3E0E2C003BF743 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		DBC7CBC02D18E80C008BB12E /* MIANetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIANetworking; sourceTree = "<group>"; };
+		DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC7CBC92D18F113008BB12E /* MIANetworking in Frameworks */,
 				11AFF144288F40D200BD2ADC /* SwiftUI.framework in Frameworks */,
 				11AFF142288F40D200BD2ADC /* WidgetKit.framework in Frameworks */,
 			);
@@ -242,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11521954289EECD50090F324 /* CloudKit.framework in Frameworks */,
+				DBC7CBC72D18F0E2008BB12E /* MIANetworking in Frameworks */,
+				DBC7CBC52D18F0CE008BB12E /* MIANetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,17 +258,6 @@
 				11521953289EECD50090F324 /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		11907CA127B30B6200CC5368 /* Client */ = {
-			isa = PBXGroup;
-			children = (
-				1152BF7327A70D47004EBD97 /* API.swift */,
-				1103C26D27BAD7570064D1E5 /* Error.swift */,
-				11907CA227B30B8800CC5368 /* LoadingState.swift */,
-				1103C26F27BAD82A0064D1E5 /* MIAClient.swift */,
-			);
-			path = Client;
 			sourceTree = "<group>";
 		};
 		11907CAA27B3296D00CC5368 /* shared */ = {
@@ -372,6 +355,8 @@
 		11F559F7271C546800BF5E8E = {
 			isa = PBXGroup;
 			children = (
+				DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */,
+				DBC7CBBF2D18E7E8008BB12E /* Packages */,
 				DB1A58A82AE5C549007104E3 /* Templates */,
 				DBEAD8222A5366A0009A9E9B /* Shared */,
 				11F55A02271C546800BF5E8E /* MIAapp */,
@@ -572,10 +557,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DBC7CBBF2D18E7E8008BB12E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DBC7CBC02D18E80C008BB12E /* MIANetworking */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		DBEAD8222A5366A0009A9E9B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				11907CA127B30B6200CC5368 /* Client */,
 				DB71E6E92A641CD500315D11 /* Extensions */,
 				DBEAD8232A5366B3009A9E9B /* Manager */,
 				DBA2CA812B38A4A4003BF743 /* Mocks */,
@@ -592,7 +584,6 @@
 			children = (
 				DB71E6AB2A63F1BB00315D11 /* ArchitectsManager.swift */,
 				DB71E6872A58A34200315D11 /* BuildingsManager.swift */,
-				DBEAD8242A5366DA009A9E9B /* ImageCacheManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -665,6 +656,9 @@
 				Base,
 			);
 			mainGroup = 11F559F7271C546800BF5E8E;
+			packageReferences = (
+				DBC7CBC32D18F0CE008BB12E /* XCLocalSwiftPackageReference "Packages/MIANetworking" */,
+			);
 			productRefGroup = 11F55A01271C546800BF5E8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -744,7 +738,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB71E6EF2A641E8400315D11 /* API.swift in Sources */,
 				DBD499A92C2742AF00C088BF /* APIArchitect.swift in Sources */,
 				DBD499AA2C2742B200C088BF /* APIArchitectDetail.swift in Sources */,
 				DB71E6F12A641EBF00315D11 /* APIBuilding.swift in Sources */,
@@ -757,12 +750,9 @@
 				DB71E6EC2A641E3600315D11 /* BuildingsManager.swift in Sources */,
 				DB71E6ED2A641E4700315D11 /* BuildingsMapper.swift in Sources */,
 				DB71E6EA2A641DA700315D11 /* Constants.swift in Sources */,
-				DB71E6F52A641FA500315D11 /* Error.swift in Sources */,
-				DB71E6F92A6420CC00315D11 /* ImageCacheManager.swift in Sources */,
 				DB7D9EFB2C80F99500B84A3B /* Logger.swift in Sources */,
 				DB09B48C2D02430300945E48 /* MapItemProtocol.swift in Sources */,
 				DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */,
-				DB71E6EE2A641E7100315D11 /* MIAClient.swift in Sources */,
 				DB71E6F32A641F2900315D11 /* MIAToolBarLogo.swift in Sources */,
 				DB71E6F42A641F6F00315D11 /* Secret.swift in Sources */,
 				DB71E6F82A64201C00315D11 /* String+fromHtmlToAttributed.swift in Sources */,
@@ -773,7 +763,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1152BF7427A70D47004EBD97 /* API.swift in Sources */,
 				DB71E69F2A5C7A2A00315D11 /* APIArchitect.swift in Sources */,
 				DB71E6A12A5C7D1400315D11 /* APIArchitectDetail.swift in Sources */,
 				DB71E68E2A597F4300315D11 /* APIBuilding.swift in Sources */,
@@ -813,10 +802,7 @@
 				1163482B272438FB00547A28 /* BuildingViewModel.swift in Sources */,
 				11F55A1C271CAD2A00BF5E8E /* Constants.swift in Sources */,
 				11F55A06271C546800BF5E8E /* ContentView.swift in Sources */,
-				1103C26E27BAD7570064D1E5 /* Error.swift in Sources */,
 				1152BF7827A7399B004EBD97 /* Extensions.swift in Sources */,
-				DBEAD8252A5366DA009A9E9B /* ImageCacheManager.swift in Sources */,
-				11907CA327B30B8800CC5368 /* LoadingState.swift in Sources */,
 				DBA2CA902B3E0E2C003BF743 /* Logger.swift in Sources */,
 				DB671C8F2CD68810002F78BD /* MapHomeView.swift in Sources */,
 				DB09B48A2D02410000945E48 /* MapItemProtocol.swift in Sources */,
@@ -825,7 +811,6 @@
 				111BB2722842B79F00FF72F1 /* MIAAsyncHeaderImage.swift in Sources */,
 				DB20763B2A54A53600106FC0 /* MIAAsyncImageView.swift in Sources */,
 				DB20763D2A54A54800106FC0 /* MIAAsyncImageViewModel.swift in Sources */,
-				1103C27027BAD82A0064D1E5 /* MIAClient.swift in Sources */,
 				1103C27227BAE41B0064D1E5 /* MIAErrorView.swift in Sources */,
 				118680DA27B5B0360008C589 /* MIAFoldableText.swift in Sources */,
 				113478A4272B2B7700C94E69 /* MIAMapPinView.swift in Sources */,
@@ -918,6 +903,7 @@
 		};
 		11F55A0C271C546C00BF5E8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -981,6 +967,7 @@
 		};
 		11F55A0D271C546C00BF5E8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1059,7 +1046,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1097,7 +1084,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1143,6 +1130,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		DBC7CBC32D18F0CE008BB12E /* XCLocalSwiftPackageReference "Packages/MIANetworking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MIANetworking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBC7CBC42D18F0CE008BB12E /* MIANetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIANetworking;
+		};
+		DBC7CBC62D18F0E2008BB12E /* MIANetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIANetworking;
+		};
+		DBC7CBC82D18F113008BB12E /* MIANetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIANetworking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11F559F8271C546800BF5E8E /* Project object */;
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import OSLog
+import MIANetworking
 
 // MARK: - BuildingsManager
 
@@ -17,7 +18,7 @@ class BuildingsManager {
 
     func getBuildings() async throws -> [Building] {
 
-        let result = await MIAClient.fetch(API.request(for: API.buildings))
+        let result = await MIAClient.fetch(.architects)
         
         switch result {
         case .success(let data):
@@ -41,7 +42,7 @@ class BuildingsManager {
     func getBuildingDetail(for id: Int) async throws -> BuildingDetail {
         
         let startTime = CFAbsoluteTimeGetCurrent()
-        let result = await MIAClient.fetch(API.request(for: API.building(for: id)))
+        let result = await MIAClient.fetch(.building(id: id))
         Logger.buildingsManager.debug("Load Building with id: \(id) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
 
         switch result {

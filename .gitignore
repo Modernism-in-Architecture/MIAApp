@@ -96,6 +96,7 @@ iOSInjectionProject/
 # MIA App
 
 **/Secret.swift
+Config.xcconfig
 MIAapp/TestImages.xcassets
 MIAapp/TestImages2.xcassets
 MIAapp/MyPlayground.playground

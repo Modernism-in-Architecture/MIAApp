@@ -10,7 +10,7 @@ import OSLog
 
 public class ImageCacheManager {
 
-    static let instance = ImageCacheManager()
+    nonisolated(unsafe) static let instance = ImageCacheManager()
     private init() {}
 
     private var cache: NSCache<NSString, WrappedImage> = {
@@ -23,7 +23,7 @@ public class ImageCacheManager {
 
     func add(image: UIImage, for url: URL, until expirationDate: Date) {
         
-        Logger.cache.debug("Save image for url: \(url)")
+//        Logger.cache.debug("Save image for url: \(url)")
         
         let cacheObject = WrappedImage(image: image, expirationDate: expirationDate)
         let key = NSString(string: url.absoluteString)
@@ -32,7 +32,7 @@ public class ImageCacheManager {
 
     func get(url: URL) -> UIImage? {
         
-        Logger.cache.debug("get image for url: \(url)")
+//        Logger.cache.debug("get image for url: \(url)")
         
         let key = NSString(string: url.absoluteString)
         

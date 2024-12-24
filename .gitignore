@@ -101,3 +101,4 @@ MIAapp/TestImages2.xcassets
 MIAapp/MyPlayground.playground
 
 .env.default
+Config.xcconfig

@@ -30,8 +30,10 @@ extension String {
 extension String {
     
     var fromMarkdownToAttributedString: AttributedString {
+        
         let font = UIFont.preferredFont(forTextStyle: .body)
-        var attributedString = (try? AttributedString(markdown: self)) ?? AttributedString("")
+        let options = AttributedString.MarkdownParsingOptions(interpretedSyntax: .inlineOnlyPreservingWhitespace)
+        var attributedString = (try? AttributedString(markdown: self, options: options)) ?? AttributedString("")
         attributedString.font = font
         return attributedString
     }

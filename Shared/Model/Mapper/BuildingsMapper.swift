@@ -69,7 +69,7 @@ extension BuildingsMapper {
             id: model.id,
             lastName: model.lastName,
             firstName: model.firstName,
-            fullName: [model.firstName, model.lastName].filter{ !$0.isEmpty }.joined(separator: ", ")
+            fullName: [model.lastName, model.firstName].filter{ !$0.isEmpty }.joined(separator: ", ")
         )
     }
 }

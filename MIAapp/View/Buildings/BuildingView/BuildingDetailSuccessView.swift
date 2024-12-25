@@ -76,7 +76,7 @@ private extension BuildingDetailSuccessView {
             MIASection("Description", ignoreIf: buildingDetail.description.isEmpty) {
                 MIAFoldableText(text: buildingDetail.attributedDescription)
             }
-            MIASection("History", ignoreIf: buildingDetail.description.isEmpty) {
+            MIASection("History", ignoreIf: buildingDetail.history.isEmpty) {
                 MIAFoldableText(text: buildingDetail.attributedHistory)
             }
             MIASection("Location") {

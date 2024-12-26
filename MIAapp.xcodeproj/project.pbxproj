@@ -73,11 +73,10 @@
 		DBA2CA8E2B3DEDC2003BF743 /* BuildingDetail+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */; };
 		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
 		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
-		DBC7CBC52D18F0CE008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBC42D18F0CE008BB12E /* MIANetworking */; };
-		DBC7CBC72D18F0E2008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBC62D18F0E2008BB12E /* MIANetworking */; };
 		DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBCB2D1CBAEA008BB12E /* MIACore */; };
-		DBC7CBD02D1CD2DA008BB12E /* MIANetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBCF2D1CD2DA008BB12E /* MIANetworking */; };
 		DBC7CBD22D1CD2DD008BB12E /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBD12D1CD2DD008BB12E /* MIACore */; };
+		DBC7CBDE2D1E0609008BB12E /* MIACoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBDD2D1E0609008BB12E /* MIACoreNetworking */; };
+		DBC7CBE02D1E0614008BB12E /* MIACoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBDF2D1E0614008BB12E /* MIACoreNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,9 +171,9 @@
 		DBA2CA8B2B39BAFE003BF743 /* Schunck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Schunck.jpg; sourceTree = "<group>"; };
 		DBA2CA8D2B3DEDC2003BF743 /* BuildingDetail+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildingDetail+Mock.swift"; sourceTree = "<group>"; };
 		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		DBC7CBC02D18E80C008BB12E /* MIANetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIANetworking; sourceTree = "<group>"; };
 		DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		DBC7CBCA2D1CB96F008BB12E /* MIACore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACore; sourceTree = "<group>"; };
+		DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACoreNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC7CBD22D1CD2DD008BB12E /* MIACore in Frameworks */,
-				DBC7CBD02D1CD2DA008BB12E /* MIANetworking in Frameworks */,
+				DBC7CBE02D1E0614008BB12E /* MIACoreNetworking in Frameworks */,
 				11AFF144288F40D200BD2ADC /* SwiftUI.framework in Frameworks */,
 				11AFF142288F40D200BD2ADC /* WidgetKit.framework in Frameworks */,
 			);
@@ -195,8 +194,7 @@
 			files = (
 				11521954289EECD50090F324 /* CloudKit.framework in Frameworks */,
 				DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */,
-				DBC7CBC72D18F0E2008BB12E /* MIANetworking in Frameworks */,
-				DBC7CBC52D18F0CE008BB12E /* MIANetworking in Frameworks */,
+				DBC7CBDE2D1E0609008BB12E /* MIACoreNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC7CBCA2D1CB96F008BB12E /* MIACore */,
-				DBC7CBC02D18E80C008BB12E /* MIANetworking */,
+				DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -1001,25 +999,21 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DBC7CBC42D18F0CE008BB12E /* MIANetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIANetworking;
-		};
-		DBC7CBC62D18F0E2008BB12E /* MIANetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIANetworking;
-		};
 		DBC7CBCB2D1CBAEA008BB12E /* MIACore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MIACore;
 		};
-		DBC7CBCF2D1CD2DA008BB12E /* MIANetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIANetworking;
-		};
 		DBC7CBD12D1CD2DD008BB12E /* MIACore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MIACore;
+		};
+		DBC7CBDD2D1E0609008BB12E /* MIACoreNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIACoreNetworking;
+		};
+		DBC7CBDF2D1E0614008BB12E /* MIACoreNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIACoreNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

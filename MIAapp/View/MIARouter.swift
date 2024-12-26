@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 import OSLog
-import MIANetworking
+import MIACoreNetworking
 import MIACore
 
 class MIARouter: ObservableObject {

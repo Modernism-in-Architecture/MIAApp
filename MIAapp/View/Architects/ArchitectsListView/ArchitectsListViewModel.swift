@@ -7,7 +7,7 @@
 
 import Foundation
 import MIACore
-import MIANetworking
+import MIACoreNetworking
 
 class ArchitectsListViewModel: ObservableObject {
     

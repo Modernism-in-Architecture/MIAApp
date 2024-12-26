@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import MIANetworking
+import MIACoreNetworking
 
 class MIAAsyncImageViewModel: ObservableObject {
 

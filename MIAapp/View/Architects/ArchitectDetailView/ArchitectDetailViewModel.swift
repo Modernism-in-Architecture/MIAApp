@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import MIANetworking
+import MIACoreNetworking
 import MIACore
 
 class ArchitectDetailViewModel: ObservableObject {

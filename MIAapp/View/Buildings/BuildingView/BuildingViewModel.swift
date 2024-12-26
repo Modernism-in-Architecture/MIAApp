@@ -7,7 +7,7 @@
 
 import Foundation
 import OSLog
-import MIANetworking
+import MIACoreNetworking
 import MIACore
 
 class BuildingViewModel: ObservableObject {

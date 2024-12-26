@@ -7,6 +7,8 @@
 
 import CoreLocation
 import SwiftUI
+import MIACore
+import MIANetworking
 
 // MARK: - BuildingsListViewModel
 

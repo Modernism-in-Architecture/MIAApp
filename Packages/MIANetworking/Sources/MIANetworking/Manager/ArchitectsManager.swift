@@ -6,13 +6,15 @@
 //
 
 import Foundation
-import MIANetworking
+import MIACore
 
-class ArchitectsManager {
+public class ArchitectsManager {
     
     let mapper = ArchitectsMapper()
     
-    func getArchitects() async throws -> [Architect] {
+    public init() {}
+    
+    public func getArchitects() async throws -> [Architect] {
         
         let result = await MIAClient.fetch(.architects)
         
@@ -31,7 +33,7 @@ class ArchitectsManager {
         }
     }
     
-    func getArchitectDetail(for id: Int) async throws -> ArchitectDetail {
+    public func getArchitectDetail(for id: Int) async throws -> ArchitectDetail {
         
         let result = await MIAClient.fetch(.architect(id: id))
         

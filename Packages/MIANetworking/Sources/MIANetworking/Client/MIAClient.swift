@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OSLog
+import MIACore
 
 // MARK: - MIAClient
 
@@ -22,7 +23,7 @@ public final class MIAClient {
             
             let (data, response) = try await session.data(for: request, delegate: nil)
             
-//            Logger.client.debug("\(request.description) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
+            Logger.client.debug("\(request.description) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
             
             guard let response = response as? HTTPURLResponse else {
                 return .failure(.InternalError(GenericError(message: "not a HTTPURLResponse")))
@@ -40,7 +41,7 @@ public final class MIAClient {
             return .failure(.InternalError(.init(message: "Wrong Url")))
         }
         
-        return await fetch(request)
+        return await fetch(urlRequest)
     }
     
     private static func checkStatusCode(_ response: HTTPURLResponse, _ data: Data) -> Result<ClientResult, ClientError> {

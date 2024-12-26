@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import MIACore
 
 class MIAMapViewModel: ObservableObject {
     

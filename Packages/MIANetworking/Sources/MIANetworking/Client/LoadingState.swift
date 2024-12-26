@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum LoadingStateWithContent<Value> {
+public enum LoadingStateWithContent<Value> {
 
     case loading
     case success(Value)
     case error(ManagerError)
 }
 
-enum LoadingState {
+public enum LoadingState {
 
     case loading
     case success

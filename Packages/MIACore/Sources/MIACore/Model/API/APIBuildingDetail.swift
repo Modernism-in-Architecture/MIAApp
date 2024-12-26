@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - APIBuildingDetail
 
-struct APIBuildingDetail: Decodable {
+public struct APIBuildingDetail: Decodable {
     let data: APIData
 }
 
@@ -17,7 +17,7 @@ extension APIBuildingDetail {
     
     // MARK: - APIData
     
-    struct APIData: Decodable {
+    public struct APIData: Decodable {
         
         let id: Int
         let name: String
@@ -45,7 +45,7 @@ extension APIBuildingDetail {
     
     // MARK: - APIArchitect
     
-    struct APIArchitect: Decodable {
+    public struct APIArchitect: Decodable {
         
         let id: Int
         let lastName: String

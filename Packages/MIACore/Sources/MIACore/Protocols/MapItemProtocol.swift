@@ -7,7 +7,7 @@
 
 import MapKit
 
-protocol MapItemProtocol {
+public protocol MapItemProtocol {
     
     var id: Int { get }
     var name: String { get }

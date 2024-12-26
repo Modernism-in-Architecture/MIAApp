@@ -7,18 +7,20 @@
 
 import Foundation
 import OSLog
-import MIANetworking
+import MIACore
 
 // MARK: - BuildingsManager
 
 // TODO: Cleanup and Format this File
-class BuildingsManager {
+public class BuildingsManager {
+    
+    public init() {}
 
     let mapper = BuildingsMapper()
 
-    func getBuildings() async throws -> [Building] {
+    public func getBuildings() async throws -> [Building] {
 
-        let result = await MIAClient.fetch(.architects)
+        let result = await MIAClient.fetch(.buildings)
         
         switch result {
         case .success(let data):
@@ -39,7 +41,7 @@ class BuildingsManager {
         }
     }
     
-    func getBuildingDetail(for id: Int) async throws -> BuildingDetail {
+    public func getBuildingDetail(for id: Int) async throws -> BuildingDetail {
         
         let startTime = CFAbsoluteTimeGetCurrent()
         let result = await MIAClient.fetch(.building(id: id))
@@ -71,7 +73,7 @@ class BuildingsManager {
 
 // MARK: - ManagerError
 
-enum ManagerError: Error {
+public enum ManagerError: Error {
 
     case networkError
     case unknownError

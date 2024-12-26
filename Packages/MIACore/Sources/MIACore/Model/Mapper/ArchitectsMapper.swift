@@ -8,15 +8,17 @@
 import Foundation
 import MapKit
 
-class ArchitectsMapper {
+public class ArchitectsMapper {
     
     let buildingsMapper = BuildingsMapper()
     
-    func map(_ model: APIArchitects) -> [Architect] {
+    public init() {}
+    
+    public func map(_ model: APIArchitects) -> [Architect] {
         model.data.map(map)
     }
     
-    func map(_ model: APIArchitects.APIArchitect) -> Architect {
+    public func map(_ model: APIArchitects.APIArchitect) -> Architect {
         
         Architect(
             id: model.id,
@@ -31,7 +33,7 @@ class ArchitectsMapper {
 
 extension ArchitectsMapper {
     
-    func map(_ model: APIArchitectDetail) -> ArchitectDetail {
+    public func map(_ model: APIArchitectDetail) -> ArchitectDetail {
         
         let data = model.data
         

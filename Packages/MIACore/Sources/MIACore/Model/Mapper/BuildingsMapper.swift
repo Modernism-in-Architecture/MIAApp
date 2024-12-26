@@ -9,13 +9,15 @@ import MapKit
 
 // MARK: - BuildingsMapper
 
-class BuildingsMapper {
+public final class BuildingsMapper {
     
-    func map(_ model: APIBuildings) -> [Building] {
+    public init() {}
+    
+    public func map(_ model: APIBuildings) -> [Building] {
         model.data.map(map)
     }
 
-    func map(_ model: APIBuildings.APIBuilding) -> Building {
+    public func map(_ model: APIBuildings.APIBuilding) -> Building {
         
         Building(
             id: model.id,
@@ -34,7 +36,7 @@ class BuildingsMapper {
 
 extension BuildingsMapper {
 
-    func map(_ model: APIBuildingDetail) -> BuildingDetail {
+    public func map(_ model: APIBuildingDetail) -> BuildingDetail {
         
         let data = model.data
         
@@ -63,7 +65,7 @@ extension BuildingsMapper {
         )
     }
     
-    func map(_ model: APIBuildingDetail.APIArchitect) -> Architect {
+    public func map(_ model: APIBuildingDetail.APIArchitect) -> Architect {
         
         return Architect (
             id: model.id,

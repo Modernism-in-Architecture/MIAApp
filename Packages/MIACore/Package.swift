@@ -4,28 +4,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "MIANetworking",
+    name: "MIACore",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "MIANetworking",
-            targets: ["MIANetworking"]),
-    ],
-    dependencies: [
-        .package(path: "../MIACore"),
+            name: "MIACore",
+            targets: ["MIACore"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MIANetworking",
-            dependencies: ["MIACore"],
-            path: "Sources"
-        ),
+            name: "MIACore"),
         .testTarget(
-            name: "MIANetworkingTests",
-            dependencies: ["MIANetworking"]
+            name: "MIACoreTests",
+            dependencies: ["MIACore"]
         ),
     ]
 )

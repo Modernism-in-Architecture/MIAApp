@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MIACore
 
 struct BuildingsListCellView: View {
     

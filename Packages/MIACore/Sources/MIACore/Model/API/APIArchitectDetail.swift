@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - APIWelcome
-struct APIArchitectDetail: Decodable {
+public struct APIArchitectDetail: Decodable {
     let data: APIArchitect
 }
 

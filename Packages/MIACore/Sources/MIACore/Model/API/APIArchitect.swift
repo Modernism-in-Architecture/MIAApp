@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - APIWelcome
 
-struct APIArchitects: Decodable {
+public struct APIArchitects: Decodable {
     let data: [APIArchitect]
 }
 
@@ -17,7 +17,7 @@ extension APIArchitects {
     
     // MARK: - APIArchitect
     
-    struct APIArchitect: Decodable {
+    public struct APIArchitect: Decodable {
         
         let id: Int
         let lastName: String

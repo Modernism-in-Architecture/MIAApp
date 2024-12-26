@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct APIBuildings: Decodable {
+public struct APIBuildings: Decodable {
     var data: [APIBuilding]
 }
 
 extension APIBuildings {
     
-    struct APIBuilding: Decodable, Identifiable, Hashable {
+    public struct APIBuilding: Decodable, Identifiable, Hashable {
         
-        let id: Int
+        public let id: Int
         let name: String
         let yearOfConstruction: String
         let city: String

@@ -14,13 +14,14 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../MIACore"),
+        .package(path: "../MIACoreNetworking"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "MIACoreUI",
-            dependencies: ["MIACore"],
+            dependencies: ["MIACore", "MIACoreNetworking"],
             path: "Sources"
         ),
         .testTarget(

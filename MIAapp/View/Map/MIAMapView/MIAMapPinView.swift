@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MIACore
+import MIACoreUI
 
 struct MIAMapPinView: View {
     
@@ -22,7 +23,7 @@ struct MIAMapPinView: View {
         
         ZStack {
             
-            MIAAsyncImageView(previewImageURL)
+            MIAAsyncImageView(previewImageURL, background: .background)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .overlay(Circle().stroke(Color(.imageCircle), lineWidth: strokeSize))
                 .shadow(radius: showShadow ? 5 : 0)

@@ -7,11 +7,19 @@
 
 import SwiftUI
 
-struct MIAActivityIndicator: View {
-    @State private var endPoint = 0.0
+// MARK: - MIAActivityIndicator
 
-    var body: some View {
-        return ZStack {
+public struct MIAActivityIndicator: View {
+    
+    @State private var endPoint = 0.0
+    
+    public init(endPoint: Double = 0.0) {
+        self.endPoint = endPoint
+    }
+
+    public var body: some View {
+        
+        ZStack {
             Ring(endPoint: endPoint)
                 .stroke(Color.green, lineWidth: 4)
                 .rotationEffect(Angle(degrees: 90))
@@ -29,41 +37,58 @@ struct MIAActivityIndicator: View {
     }
 }
 
+// MARK: - Ring
+
 struct Ring: Shape {
+    
     var endPoint: Double
     var delayPoint = 0.5
 
     var animatableData: Double {
-        get { return endPoint }
-        set { endPoint = newValue }
+        
+        get {
+            endPoint
+        }
+        
+        set {
+            endPoint = newValue
+        }
     }
 
     func path(in rect: CGRect) -> Path {
-        return Path { path in
+        
+        Path { path in
+            
             let startPoint = (endPoint > delayPoint) ? (2 * endPoint) : 0
-            path.addArc(center: CGPoint(x: rect.size.width/2, y: rect.size.width/2),
-                        radius: rect.size.width/2,
-                        startAngle: .normal(startPoint),
-                        endAngle: .normal(endPoint),
-                        clockwise: false)
+            path.addArc(
+                center: CGPoint(x: rect.size.width/2, y: rect.size.width/2),
+                radius: rect.size.width/2,
+                startAngle: .normal(startPoint),
+                endAngle: .normal(endPoint),
+                clockwise: false
+            )
         }
     }
 }
 
 extension Angle {
+    
     static func normal(_ value: Double) -> Angle {
-        return .degrees(value * 360)
+        .degrees(value * 360)
     }
 }
 
+// MARK: - MIAActivityIndicator_Previews
+
 struct MIAActivityIndicator_Previews: PreviewProvider {
+    
     static var previews: some View {
         VStack {
+            
             MIAActivityIndicator()
                 .scaleEffect(0.5)
             MIAActivityIndicator()
                 .scaleEffect(1)
         }
-
     }
 }

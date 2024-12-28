@@ -7,20 +7,24 @@
 
 import SwiftUI
 
-struct MIASection <Content: View>: View {
+public struct MIASection<Content: View>: View {
     
     let title: String
     let showContent: Bool
     var content: Content
     
-    init(_ title: String, ignoreIf: Bool = false, @ViewBuilder content: () -> Content) {
+    public init(
+        _ title: String,
+        ignoreIf: Bool = false,
+        @ViewBuilder content: () -> Content
+    ) {
         
         self.content = content()
         self.title = title
         self.showContent = !ignoreIf
     }
     
-    var body: some View {
+    public var body: some View {
         
         if showContent {
             
@@ -33,7 +37,9 @@ struct MIASection <Content: View>: View {
         
         VStack(alignment: .leading) {
             
-            Text(title.uppercased()).font(.caption).foregroundColor(.secondary)
+            Text(title.uppercased())
+                .font(.caption)
+                .foregroundColor(.secondary)
             Divider()
             VStack(alignment: .leading) {
                 content
@@ -51,4 +57,3 @@ struct MIASection <Content: View>: View {
     }
     .padding()
 }
-

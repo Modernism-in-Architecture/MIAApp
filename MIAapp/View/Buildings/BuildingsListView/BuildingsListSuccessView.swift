@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MIACore
+import MIACoreUI
 
 // TODO: Cleanup and Format this File
 struct BuildingsListSuccessView: View {

@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import MIACoreNetworking
+import MIACoreUI
 import MIACore
 
 struct Provider {

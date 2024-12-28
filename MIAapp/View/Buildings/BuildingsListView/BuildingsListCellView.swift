@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MIACore
+import MIACoreUI
 
 struct BuildingsListCellView: View {
     
@@ -24,7 +25,7 @@ struct BuildingsListCellView: View {
                     
                     ZStack(alignment: .top) {
                         
-                        MIAAsyncHeaderImage(url: building.feedImage)
+                        MIAAsyncHeaderImage(url: building.feedImage, background: .background)
                         bookmark
                     }
                     caption

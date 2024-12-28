@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MIACore
+import MIACoreUI
 
 // MARK: - BookmarksView
 

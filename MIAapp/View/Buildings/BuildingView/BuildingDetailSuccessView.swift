@@ -9,6 +9,7 @@ import MapKit
 import OSLog
 import SwiftUI
 import MIACore
+import MIACoreUI
 
 // MARK: - BuildingDetailSuccessView
 
@@ -47,7 +48,7 @@ private extension BuildingDetailSuccessView {
             
             VStack(alignment: .leading) {
                 
-                MIAAsyncHeaderImage(url: buildingDetail.feedImageURL)
+                MIAAsyncHeaderImage(url: buildingDetail.feedImageURL, background: .background)
                 details
                     .padding()
             }

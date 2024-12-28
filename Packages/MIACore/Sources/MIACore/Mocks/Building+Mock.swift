@@ -7,11 +7,10 @@
 
 import Foundation
 import MapKit
-import MIACore
 
 extension Building {
     
-    static let schunckMock = Self(
+    public static let schunckMock = Self(
         id: 1,
         name: "Department store (Modehuis) Schunck (1934)",
         yearOfConstruction: "1934",

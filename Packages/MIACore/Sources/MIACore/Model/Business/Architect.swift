@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Architect: Decodable, Identifiable, Hashable {
+public struct Architect: Decodable, Identifiable, Hashable, Sendable {
     
     public init(
         id: Int,

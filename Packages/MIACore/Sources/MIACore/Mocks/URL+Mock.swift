@@ -9,5 +9,5 @@ import Foundation
 
 extension URL {
     
-    static let image1MockUrl = Bundle.main.url(forResource: "Schunck", withExtension: "jpg")
+    public static let image1MockUrl = Bundle.main.url(forResource: "Schunck", withExtension: "jpg")
 }

@@ -7,7 +7,7 @@
 
 import MapKit
 
-public struct BuildingDetail: Decodable {
+public struct BuildingDetail: Decodable, Sendable {
     
     public init(
         id: Int,

@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import MIACore
 
 extension BuildingDetail {
     
-    static let schunckMock = Self(
+    public static let schunckMock = Self(
         id: 828,
         name: "Department store (Modehuis) Schunck",
         yearOfConstruction: "1934",

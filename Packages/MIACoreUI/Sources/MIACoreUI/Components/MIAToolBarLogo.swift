@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct MIAToolBarLogo: View {
-    var body: some View {
+public struct MIAToolBarLogo: View {
+    
+    public init() {}
+    
+    public var body: some View {
+        
         Image("mia")
             .resizable()
             .scaledToFit()
@@ -16,8 +20,6 @@ struct MIAToolBarLogo: View {
     }
 }
 
-struct MIAToolBarLogo_Previews: PreviewProvider {
-    static var previews: some View {
-        MIAToolBarLogo()
-    }
+#Preview {
+    MIAToolBarLogo()
 }

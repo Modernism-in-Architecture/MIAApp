@@ -20,10 +20,30 @@ class ArchitectsListViewModel: ObservableObject {
     private var architectsManager = ArchitectsManager()
 }
 
+extension ArchitectsListViewModel {
+    
+    func fetch() {
+        
+        self.state = .loading
+        
+        Task {
+            await fetch()
+        }
+    }
+}
+
 @MainActor
 extension ArchitectsListViewModel {
     
-    func fetchData() async {
+    func refresh() async {
+        await fetch()
+    }
+}
+
+@MainActor
+private extension ArchitectsListViewModel {
+    
+    func fetch() async {
         
         do {
             

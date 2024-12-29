@@ -17,6 +17,9 @@ public struct MIASectionIndexView: View {
     @State
     var keys: [String]
     
+    @State
+    private var previousKey: String? = .none
+    
     public init(scrollViewProxy: ScrollViewProxy, keys: [String]) {
         
         self.scrollViewProxy = scrollViewProxy
@@ -114,6 +117,11 @@ private extension MIASectionIndexView {
     func moveTo(key: String) {
         
         scrollViewProxy.scrollTo(key, anchor: .top)
-        generator.impactOccurred()
+        
+        if key != previousKey {
+            
+            generator.impactOccurred()
+            previousKey = key
+        }
     }
 }

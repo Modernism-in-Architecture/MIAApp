@@ -31,7 +31,7 @@ public struct MIAErrorView: View {
                 
             case .notImplementedError:
                 #warning(".notImplementedError Needs to be removed")
-                EmptyView()
+                Text("notImplementedError")
             }
         }
     }

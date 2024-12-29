@@ -10,11 +10,20 @@ import SwiftUI
 @main
 struct MIAappApp: App {
     
-    @StateObject var router = MIARouter()
-    @StateObject var buildingsListViewModel = BuildingsListViewModel()
-    @StateObject var mapViewModel = MIAMapViewModel()
-    @StateObject var architectsListViewModel = ArchitectsListViewModel()
-    @StateObject var cloudKitBookmarksController = BookmarksViewModel()
+    @StateObject
+    var router = MIARouter()
+    
+    @StateObject
+    var buildingsListViewModel = BuildingsListViewModel()
+    
+    @StateObject
+    var mapViewModel = MIAMapViewModel()
+    
+    @StateObject
+    var architectsListViewModel = ArchitectsListViewModel()
+    
+    @StateObject
+    var cloudKitBookmarksController = BookmarksViewModel()
     
     var body: some Scene {
         
@@ -28,8 +37,8 @@ struct MIAappApp: App {
                 .environmentObject(cloudKitBookmarksController)
                 .task {
                     
-                    await buildingsListViewModel.fetchData()
-                    await architectsListViewModel.fetchData()
+                    buildingsListViewModel.fetch()
+                    architectsListViewModel.fetch()
                 }
                 .onOpenURL { url in
                     router.deepLinkTarget = url

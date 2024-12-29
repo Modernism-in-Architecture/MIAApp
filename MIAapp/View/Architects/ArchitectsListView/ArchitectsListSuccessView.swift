@@ -30,6 +30,9 @@ struct ArchitectsListSuccessView: View {
 
     var body: some View {
         content
+            .refreshable {
+                await architectsListViewModel.refresh()
+            }
     }
 }
 
@@ -125,7 +128,6 @@ private extension ArchitectsListSuccessView {
                     }
                 }
             }
-//            .listStyle(.insetGrouped)
         }
     }
     
@@ -259,7 +261,7 @@ private extension ArchitectsListSuccessView {
     let viewModel = ArchitectsListViewModel()
     
     Task {
-        await viewModel.fetchData()
+        await viewModel.fetch()
     }
     
     return ArchitectsListSuccessView()
@@ -272,7 +274,7 @@ private extension ArchitectsListSuccessView {
     let viewModel = ArchitectsListViewModel()
     
     Task {
-        await viewModel.fetchData()
+        await viewModel.fetch()
     }
     
     return ArchitectsListSuccessView()

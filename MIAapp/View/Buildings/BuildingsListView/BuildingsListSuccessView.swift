@@ -15,6 +15,9 @@ struct BuildingsListSuccessView: View {
     @EnvironmentObject
     var router: MIARouter
     
+    @EnvironmentObject
+    var buildingsListViewModel: BuildingsListViewModel
+    
     @State 
     private var searchText = ""
     
@@ -64,6 +67,9 @@ struct BuildingsListSuccessView: View {
                     MIASearchButton(isSearching: $isSearching)
                 }
             }
+        }
+        .refreshable {
+            await buildingsListViewModel.refresh()
         }
     }
     

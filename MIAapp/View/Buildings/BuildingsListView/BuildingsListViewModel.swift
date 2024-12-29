@@ -14,18 +14,41 @@ import MIACoreNetworking
 
 class BuildingsListViewModel: ObservableObject {
         
-    @Published var state: LoadingState = .loading
-    @Published var buildings: [Building] = []
+    @Published
+    var state: LoadingState = .loading
+    
+    @Published
+    var buildings: [Building] = []
     
     private var buildingsMangager = BuildingsManager()
+}
+
+extension BuildingsListViewModel {
+    
+    func fetch() {
+        
+        state = .loading
+        
+        Task {
+            await fetch()
+        }
+    }
+}
+
+@MainActor
+extension BuildingsListViewModel {
+    
+    func refresh() async {
+        await fetch()
+    }
 }
 
 // MARK: - Load Buildings
 
 @MainActor
-extension BuildingsListViewModel {
+private extension BuildingsListViewModel {
     
-    func fetchData() async {
+    func fetch() async {
         
         do {
             
@@ -54,4 +77,3 @@ extension BuildingsListViewModel {
         try await buildingsMangager.getBuildingDetail(for: id)
     }
 }
-

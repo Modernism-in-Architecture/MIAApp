@@ -10,7 +10,8 @@ import MIACoreUI
 
 struct ArchitectsListView: View {
     
-    @EnvironmentObject var architectsController: ArchitectsListViewModel
+    @EnvironmentObject
+    var architectsController: ArchitectsListViewModel
     
     var body: some View {
         
@@ -21,10 +22,9 @@ struct ArchitectsListView: View {
         case .loading:
             MIAActivityIndicator()
             
-        case .error(let error):
+        case let .error(error):
             // TODO: pass real error if changed to ManagerError
             MIAErrorView(error: .notImplementedError)
         }
     }
 }
-

@@ -5,9 +5,9 @@
 //  Created by Sören Kirchner on 31.05.22.
 //
 
-import SwiftUI
 import MIACore
 import MIACoreUI
+import SwiftUI
 
 // MARK: - ArchitectsListSuccessView
 
@@ -107,18 +107,25 @@ private extension ArchitectsListSuccessView {
         
         var body: some View {
             
-            List {
+            ScrollView {
                 
-                ForEach(groupedArchitects.keys.sorted(), id: \.self) { sectionKey in
-                
-                    ArchitectsGroupedListSectionView(
-                        router: router,
-                        sectionKey: sectionKey,
-                        architects: groupedArchitects[sectionKey] ?? []
-                    )
+                LazyVStack(
+                    alignment: .leading,
+                    spacing: .zero,
+                    pinnedViews: [.sectionHeaders])
+                {
+                    
+                    ForEach(groupedArchitects.keys.sorted(), id: \.self) { sectionKey in
+                        
+                        ArchitectsGroupedListSectionView(
+                            router: router,
+                            sectionKey: sectionKey,
+                            architects: groupedArchitects[sectionKey] ?? []
+                        )
+                    }
                 }
             }
-            .listStyle(.insetGrouped)
+//            .listStyle(.insetGrouped)
         }
     }
     
@@ -132,12 +139,44 @@ private extension ArchitectsListSuccessView {
         
         var body: some View {
             
-            Section(header: Text("\(sectionKey)")) {
-                    
+            Section(header: sectionHeader) {
+                sectionContent
+            }
+        }
+        
+        var sectionContent: some View {
+            
+            VStack(spacing: .zero) {
+                
                 ForEach(architects) { architect in
-                    ArchitectsGroupedListRowView(router: router, architect: architect)
+                    
+                    ArchitectsGroupedListRowView(
+                        router: router,
+                        architect: architect,
+                        isLast: architect == architects.last
+                    )
                 }
             }
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(UIColor.secondarySystemBackground))
+            )
+            .padding(.horizontal, 18)
+            .padding(.bottom, 18)
+        }
+        
+        var sectionHeader: some View {
+            
+            HStack {
+                
+                Text("\(sectionKey)")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Spacer()
+            }
+            .padding(.horizontal, 36)
+            .padding(.vertical, 6)
+            .background(.background)
         }
     }
     
@@ -148,12 +187,41 @@ private extension ArchitectsListSuccessView {
         
         let architect: Architect
         
+        let isLast: Bool
+        
         var body: some View {
             
-            Text("\(architect.fullName)")
-                .onTapGesture {
-                    router.showArchitectDetail(id: architect.id)
+            VStack(spacing: .zero) {
+                
+                row
+                if !isLast {
+                    rowDivider
                 }
+            }
+        }
+        
+        var row: some View {
+            
+            HStack(alignment: .center) {
+                
+                Text("\(architect.fullName)")
+                    .padding(.leading, 18)
+                    .padding(.vertical, 12)
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                router.showArchitectDetail(id: architect.id)
+            }
+        }
+        
+        var rowDivider: some View {
+            
+            Rectangle()
+                .fill(.tertiary.opacity(0.3))
+                .frame(height: 1)
+                .padding(.vertical, .zero)
+                .padding(.leading, 18)
         }
     }
 }

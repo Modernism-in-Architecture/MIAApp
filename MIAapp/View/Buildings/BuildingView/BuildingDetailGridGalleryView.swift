@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MIACoreUI
 
 struct BuildingDetailGridGalleryView: View {
     
@@ -19,7 +20,7 @@ struct BuildingDetailGridGalleryView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .aspectRatio(1, contentMode: .fill)
                     .overlay {
-                        MIAAsyncImageView(image)
+                        MIAAsyncImageView(image, background: .background)
                     }
                     .mask(RoundedRectangle(cornerRadius: 10))
                     .shadow(color: .shadow, radius: 3, x: 2, y: 2)

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MIACore
+import MIACoreUI
 
 // MARK: - ArchitectsListSuccessView
 
@@ -17,9 +19,14 @@ struct ArchitectsListSuccessView: View {
     @EnvironmentObject
     var architectsListViewModel: ArchitectsListViewModel
     
-    @State private var searchText = ""
-    @State private var isSearching = false
-    @State var isKeyboardShowing = false
+    @State
+    var isKeyboardShowing = false
+    
+    @State
+    private var searchText = ""
+    
+    @State
+    private var isSearching = false
 
     var body: some View {
         content
@@ -34,9 +41,6 @@ private extension ArchitectsListSuccessView {
             
         VStack {
             
-            @ObservedObject
-            var router = self.router
-                        
             if isSearching {
                 MIASearchBar(text: $searchText, isSearching: $isSearching)
             }

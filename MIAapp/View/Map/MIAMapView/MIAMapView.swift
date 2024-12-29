@@ -8,6 +8,7 @@
 import MapKit
 import OSLog
 import SwiftUI
+import MIACoreUI
 
 // MARK: - MIAMapView
 

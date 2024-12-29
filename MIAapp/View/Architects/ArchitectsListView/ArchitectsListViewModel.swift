@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import MIACore
+import MIACoreNetworking
 
 class ArchitectsListViewModel: ObservableObject {
     

@@ -21,10 +21,6 @@ extension Double {
     static let shadowDistanceLimit = 5_000.0
 }
 
-extension CLLocation {
-    static let leipzig = CLLocation(latitude: 51.378277, longitude: 12.362067)
-}
-
 extension MapCameraPosition {
     static let leipzig = MapCameraPosition.camera(.init(centerCoordinate: .leipzig, distance: .defaultCameraDistance))
 }

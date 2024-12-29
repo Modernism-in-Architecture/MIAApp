@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import MIACoreNetworking
+import MIACore
 
 class ArchitectDetailViewModel: ObservableObject {
     
-    @Published var architectDetail: LoadingStateWithContent<ArchitectDetail> = .loading
+    @Published
+    var architectDetail: LoadingStateWithContent<ArchitectDetail> = .loading
     
     private var architectsManager = ArchitectsManager()
 }

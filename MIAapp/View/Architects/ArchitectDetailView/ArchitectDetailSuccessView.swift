@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import MIACore
+import MIACoreUI
 
 struct ArchitectDetailSuccessView: View {
     
@@ -75,10 +77,3 @@ struct ArchitectDetailSuccessView: View {
         .padding(.top, 10)
     }
 }
-
-//
-//struct ArchitectDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ArchitectDetailView()
-//    }
-//}

@@ -44,22 +44,18 @@
 		11F55A1C271CAD2A00BF5E8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F55A1B271CAD2A00BF5E8E /* Constants.swift */; };
 		11FAA9B52725DC8600692DA3 /* BuildingDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAA9B42725DC8600692DA3 /* BuildingDetailMapView.swift */; };
 		11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FAA9B62725F3D200692DA3 /* Media.xcassets */; };
+		D22D7B4B2D39A81F00DB1015 /* MIAPackages in Frameworks */ = {isa = PBXBuildFile; productRef = D22D7B4A2D39A81F00DB1015 /* MIAPackages */; };
+		D2D004B82D39A522006F3A49 /* MIAPackages in Frameworks */ = {isa = PBXBuildFile; productRef = D2D004B72D39A522006F3A49 /* MIAPackages */; };
 		DB16A2AA2CD538FB00FA296D /* ArchitectsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16A2A92CD538FB00FA296D /* ArchitectsHomeView.swift */; };
 		DB16A2AF2CD5811D00FA296D /* BuildingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB16A2AE2CD5811D00FA296D /* BuildingsHomeView.swift */; };
 		DB1EF67F2CDADD720015A571 /* MIAMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1EF67E2CDADD720015A571 /* MIAMapViewModel.swift */; };
 		DB1EF6822CDD7E490015A571 /* BookmarksHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1EF6812CDD7E490015A571 /* BookmarksHomeView.swift */; };
 		DB2F34AF2BFA0CBA00433A4E /* MIARouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */; };
-		DB3FE0352D1E1D4600FAD665 /* MIACoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DB3FE0342D1E1D4600FAD665 /* MIACoreUI */; };
-		DB3FE0372D1E1D4E00FAD665 /* MIACoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DB3FE0362D1E1D4E00FAD665 /* MIACoreUI */; };
 		DB671C8F2CD68810002F78BD /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB671C8E2CD68810002F78BD /* MapHomeView.swift */; };
 		DB71E6EA2A641DA700315D11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F55A1B271CAD2A00BF5E8E /* Constants.swift */; };
 		DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AFF146288F40D200BD2ADC /* MIAappWidget.swift */; };
 		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
 		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
-		DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBCB2D1CBAEA008BB12E /* MIACore */; };
-		DBC7CBD22D1CD2DD008BB12E /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBD12D1CD2DD008BB12E /* MIACore */; };
-		DBC7CBDE2D1E0609008BB12E /* MIACoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBDD2D1E0609008BB12E /* MIACoreNetworking */; };
-		DBC7CBE02D1E0614008BB12E /* MIACoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBDF2D1E0614008BB12E /* MIACoreNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,18 +124,16 @@
 		11F55A1B271CAD2A00BF5E8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11FAA9B42725DC8600692DA3 /* BuildingDetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailMapView.swift; sourceTree = "<group>"; };
 		11FAA9B62725F3D200692DA3 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D22D7B4C2D39A8C800DB1015 /* MIAPackages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIAPackages; sourceTree = "<group>"; };
 		DB16A2A92CD538FB00FA296D /* ArchitectsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectsHomeView.swift; sourceTree = "<group>"; };
 		DB16A2AE2CD5811D00FA296D /* BuildingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsHomeView.swift; sourceTree = "<group>"; };
 		DB1EF67E2CDADD720015A571 /* MIAMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIAMapViewModel.swift; sourceTree = "<group>"; };
 		DB1EF6812CDD7E490015A571 /* BookmarksHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksHomeView.swift; sourceTree = "<group>"; };
 		DB2F34AE2BFA0CBA00433A4E /* MIARouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIARouter.swift; sourceTree = "<group>"; };
 		DB3CFCA22CDEDAFF000846BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DB3FE0332D1E1BE900FAD665 /* MIACoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACoreUI; sourceTree = "<group>"; };
 		DB671C8E2CD68810002F78BD /* MapHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
 		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		DBC7CBCA2D1CB96F008BB12E /* MIACore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACore; sourceTree = "<group>"; };
-		DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACoreNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC7CBD22D1CD2DD008BB12E /* MIACore in Frameworks */,
-				DBC7CBE02D1E0614008BB12E /* MIACoreNetworking in Frameworks */,
-				DB3FE0372D1E1D4E00FAD665 /* MIACoreUI in Frameworks */,
+				D2D004B82D39A522006F3A49 /* MIAPackages in Frameworks */,
 				11AFF144288F40D200BD2ADC /* SwiftUI.framework in Frameworks */,
 				11AFF142288F40D200BD2ADC /* WidgetKit.framework in Frameworks */,
 			);
@@ -160,9 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11521954289EECD50090F324 /* CloudKit.framework in Frameworks */,
-				DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */,
-				DBC7CBDE2D1E0609008BB12E /* MIACoreNetworking in Frameworks */,
-				DB3FE0352D1E1D4600FAD665 /* MIACoreUI in Frameworks */,
+				D22D7B4B2D39A81F00DB1015 /* MIAPackages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +255,8 @@
 		11F559F7271C546800BF5E8E = {
 			isa = PBXGroup;
 			children = (
+				D22D7B4C2D39A8C800DB1015 /* MIAPackages */,
 				DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */,
-				DBC7CBBF2D18E7E8008BB12E /* Packages */,
 				11F55A02271C546800BF5E8E /* MIAapp */,
 				11AFF145288F40D200BD2ADC /* MIAappWidget */,
 				11AFF140288F40D200BD2ADC /* Frameworks */,
@@ -360,16 +350,6 @@
 				DB671C8E2CD68810002F78BD /* MapHomeView.swift */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		DBC7CBBF2D18E7E8008BB12E /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				DBC7CBCA2D1CB96F008BB12E /* MIACore */,
-				DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */,
-				DB3FE0332D1E1BE900FAD665 /* MIACoreUI */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -827,29 +807,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB3FE0342D1E1D4600FAD665 /* MIACoreUI */ = {
+		D22D7B4A2D39A81F00DB1015 /* MIAPackages */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MIACoreUI;
+			productName = MIAPackages;
 		};
-		DB3FE0362D1E1D4E00FAD665 /* MIACoreUI */ = {
+		D2D004B72D39A522006F3A49 /* MIAPackages */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = MIACoreUI;
-		};
-		DBC7CBCB2D1CBAEA008BB12E /* MIACore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIACore;
-		};
-		DBC7CBD12D1CD2DD008BB12E /* MIACore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIACore;
-		};
-		DBC7CBDD2D1E0609008BB12E /* MIACoreNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIACoreNetworking;
-		};
-		DBC7CBDF2D1E0614008BB12E /* MIACoreNetworking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MIACoreNetworking;
+			productName = MIAPackages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

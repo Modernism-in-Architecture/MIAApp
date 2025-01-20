@@ -4,10 +4,14 @@
 <dict>
 	<key>API_TOKEN</key>
 	<string>${API_TOKEN}</string>
-	<key>NSExtension</key>
+	<key>UIApplicationSceneManifest</key>
 	<dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.widgetkit-extension</string>
+		<key>UIApplicationPreferredDefaultSceneSessionRole</key>
+		<string>UIWindowSceneSessionRoleApplication</string>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<true/>
+		<key>UISceneConfigurations</key>
+		<dict/>
 	</dict>
 </dict>
 </plist>

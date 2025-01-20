@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,10 @@
 		DB671C8F2CD68810002F78BD /* MapHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB671C8E2CD68810002F78BD /* MapHomeView.swift */; };
 		DB71E6EA2A641DA700315D11 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F55A1B271CAD2A00BF5E8E /* Constants.swift */; };
 		DB71E6EB2A641DEA00315D11 /* MIAappWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AFF146288F40D200BD2ADC /* MIAappWidget.swift */; };
+		DBB41EB92D2771C800508D50 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = DBB41EB82D2771C800508D50 /* RealityKitContent */; };
+		DBB41EDE2D28AE5400508D50 /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBB41EDD2D28AE5400508D50 /* MIACore */; };
+		DBB41EE02D28AE6300508D50 /* MIACoreNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = DBB41EDF2D28AE6300508D50 /* MIACoreNetworking */; };
+		DBB41EE22D28AE6B00508D50 /* MIACoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DBB41EE12D28AE6B00508D50 /* MIACoreUI */; };
 		DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
 		DBC64B2B2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */; };
 		DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */ = {isa = PBXBuildFile; productRef = DBC7CBCB2D1CBAEA008BB12E /* MIACore */; };
@@ -69,6 +73,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 11AFF13E288F40D200BD2ADC;
 			remoteInfo = MIAappWidgetExtension;
+		};
+		DBB41EC92D2771CA00508D50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11F559F8271C546800BF5E8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB41EB42D2771C800508D50;
+			remoteInfo = MIAVisionApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -136,11 +147,29 @@
 		DB3CFCA22CDEDAFF000846BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DB3FE0332D1E1BE900FAD665 /* MIACoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACoreUI; sourceTree = "<group>"; };
 		DB671C8E2CD68810002F78BD /* MapHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHomeView.swift; sourceTree = "<group>"; };
+		DBB41EB52D2771C800508D50 /* MIAVisionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIAVisionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB41EB72D2771C800508D50 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		DBB41EC82D2771CA00508D50 /* MIAVisionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MIAVisionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC64B292BE0182C00A90345 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		DBC7CBC22D18EC7C008BB12E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		DBC7CBCA2D1CB96F008BB12E /* MIACore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACore; sourceTree = "<group>"; };
 		DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MIACoreNetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DBB41ED22D2771CA00508D50 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DBB41EB42D2771C800508D50 /* MIAVisionApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DBB41EB62D2771C800508D50 /* MIAVisionApp */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (DBB41ED22D2771CA00508D50 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MIAVisionApp; sourceTree = "<group>"; };
+		DBB41ECB2D2771CA00508D50 /* MIAVisionAppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MIAVisionAppTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		11AFF13C288F40D200BD2ADC /* Frameworks */ = {
@@ -163,6 +192,24 @@
 				DBC7CBCC2D1CBAEA008BB12E /* MIACore in Frameworks */,
 				DBC7CBDE2D1E0609008BB12E /* MIACoreNetworking in Frameworks */,
 				DB3FE0352D1E1D4600FAD665 /* MIACoreUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB41EB22D2771C800508D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBB41EDE2D28AE5400508D50 /* MIACore in Frameworks */,
+				DBB41EE02D28AE6300508D50 /* MIACoreNetworking in Frameworks */,
+				DBB41EE22D28AE6B00508D50 /* MIACoreUI in Frameworks */,
+				DBB41EB92D2771C800508D50 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB41EC52D2771CA00508D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +316,8 @@
 				DBC7CBBF2D18E7E8008BB12E /* Packages */,
 				11F55A02271C546800BF5E8E /* MIAapp */,
 				11AFF145288F40D200BD2ADC /* MIAappWidget */,
+				DBB41EB62D2771C800508D50 /* MIAVisionApp */,
+				DBB41ECB2D2771CA00508D50 /* MIAVisionAppTests */,
 				11AFF140288F40D200BD2ADC /* Frameworks */,
 				11521952289EECD50090F324 /* Frameworks */,
 				11F55A01271C546800BF5E8E /* Products */,
@@ -280,6 +329,8 @@
 			children = (
 				11F55A00271C546800BF5E8E /* MIA.app */,
 				11AFF13F288F40D200BD2ADC /* MIAappWidgetExtension.appex */,
+				DBB41EB52D2771C800508D50 /* MIAVisionApp.app */,
+				DBB41EC82D2771CA00508D50 /* MIAVisionAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,6 +419,7 @@
 				DBC7CBCA2D1CB96F008BB12E /* MIACore */,
 				DBC7CBDC2D1E0539008BB12E /* MIACoreNetworking */,
 				DB3FE0332D1E1BE900FAD665 /* MIACoreUI */,
+				DBB41EB72D2771C800508D50 /* RealityKitContent */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -411,6 +463,55 @@
 			productReference = 11F55A00271C546800BF5E8E /* MIA.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DBB41EB42D2771C800508D50 /* MIAVisionApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB41ED32D2771CA00508D50 /* Build configuration list for PBXNativeTarget "MIAVisionApp" */;
+			buildPhases = (
+				DBB41EB12D2771C800508D50 /* Sources */,
+				DBB41EB22D2771C800508D50 /* Frameworks */,
+				DBB41EB32D2771C800508D50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DBB41EB62D2771C800508D50 /* MIAVisionApp */,
+			);
+			name = MIAVisionApp;
+			packageProductDependencies = (
+				DBB41EB82D2771C800508D50 /* RealityKitContent */,
+				DBB41EDD2D28AE5400508D50 /* MIACore */,
+				DBB41EDF2D28AE6300508D50 /* MIACoreNetworking */,
+				DBB41EE12D28AE6B00508D50 /* MIACoreUI */,
+			);
+			productName = MIAVisionApp;
+			productReference = DBB41EB52D2771C800508D50 /* MIAVisionApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBB41EC72D2771CA00508D50 /* MIAVisionAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBB41ED42D2771CA00508D50 /* Build configuration list for PBXNativeTarget "MIAVisionAppTests" */;
+			buildPhases = (
+				DBB41EC42D2771CA00508D50 /* Sources */,
+				DBB41EC52D2771CA00508D50 /* Frameworks */,
+				DBB41EC62D2771CA00508D50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBB41ECA2D2771CA00508D50 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DBB41ECB2D2771CA00508D50 /* MIAVisionAppTests */,
+			);
+			name = MIAVisionAppTests;
+			packageProductDependencies = (
+			);
+			productName = MIAVisionAppTests;
+			productReference = DBB41EC82D2771CA00508D50 /* MIAVisionAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -418,7 +519,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					11AFF13E288F40D200BD2ADC = {
@@ -426,6 +527,13 @@
 					};
 					11F559FF271C546800BF5E8E = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					DBB41EB42D2771C800508D50 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					DBB41EC72D2771CA00508D50 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = DBB41EB42D2771C800508D50;
 					};
 				};
 			};
@@ -446,6 +554,8 @@
 			targets = (
 				11F559FF271C546800BF5E8E /* MIAapp */,
 				11AFF13E288F40D200BD2ADC /* MIAappWidgetExtension */,
+				DBB41EB42D2771C800508D50 /* MIAVisionApp */,
+				DBB41EC72D2771CA00508D50 /* MIAVisionAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,6 +580,20 @@
 				11FAA9B72725F3D200692DA3 /* Media.xcassets in Resources */,
 				11F55A0B271C546C00BF5E8E /* Preview Assets.xcassets in Resources */,
 				DBC64B2A2BE0182C00A90345 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB41EB32D2771C800508D50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB41EC62D2771CA00508D50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +649,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBB41EB12D2771C800508D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBB41EC42D2771CA00508D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -532,6 +670,11 @@
 			isa = PBXTargetDependency;
 			target = 11AFF13E288F40D200BD2ADC /* MIAappWidgetExtension */;
 			targetProxy = 11AFF14B288F40D400BD2ADC /* PBXContainerItemProxy */;
+		};
+		DBB41ECA2D2771CA00508D50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBB41EB42D2771C800508D50 /* MIAVisionApp */;
+			targetProxy = DBB41EC92D2771CA00508D50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -550,7 +693,7 @@
 				INFOPLIST_FILE = MIAappWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MIAappWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +723,7 @@
 				INFOPLIST_FILE = MIAappWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MIAappWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -794,6 +937,118 @@
 			};
 			name = Release;
 		};
+		DBB41ECE2D2771CA00508D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_ASSET_PATHS = "\"MIAVisionApp/Preview Content\"";
+				DEVELOPMENT_TEAM = T4C95573CH;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.soeren-kirchner.MIAVisionApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		DBB41ECF2D2771CA00508D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_ASSET_PATHS = "\"MIAVisionApp/Preview Content\"";
+				DEVELOPMENT_TEAM = T4C95573CH;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.soeren-kirchner.MIAVisionApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		DBB41ED02D2771CA00508D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = T4C95573CH;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.soeren-kirchner.MIAVisionAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MIAVisionApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MIAVisionApp";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		DBB41ED12D2771CA00508D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = T4C95573CH;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.soeren-kirchner.MIAVisionAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MIAVisionApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MIAVisionApp";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -824,6 +1079,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DBB41ED32D2771CA00508D50 /* Build configuration list for PBXNativeTarget "MIAVisionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB41ECE2D2771CA00508D50 /* Debug */,
+				DBB41ECF2D2771CA00508D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBB41ED42D2771CA00508D50 /* Build configuration list for PBXNativeTarget "MIAVisionAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBB41ED02D2771CA00508D50 /* Debug */,
+				DBB41ED12D2771CA00508D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -832,6 +1105,22 @@
 			productName = MIACoreUI;
 		};
 		DB3FE0362D1E1D4E00FAD665 /* MIACoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIACoreUI;
+		};
+		DBB41EB82D2771C800508D50 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		DBB41EDD2D28AE5400508D50 /* MIACore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIACore;
+		};
+		DBB41EDF2D28AE6300508D50 /* MIACoreNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIACoreNetworking;
+		};
+		DBB41EE12D28AE6B00508D50 /* MIACoreUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MIACoreUI;
 		};

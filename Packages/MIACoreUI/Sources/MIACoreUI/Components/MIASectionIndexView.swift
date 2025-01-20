@@ -11,7 +11,7 @@ import SwiftUI
 
 public struct MIASectionIndexView: View {
     
-    let generator = UIImpactFeedbackGenerator(style: .light)
+//    let generator = UIImpactFeedbackGenerator(style: .light)
     let scrollViewProxy: ScrollViewProxy
     
     @State
@@ -120,7 +120,7 @@ private extension MIASectionIndexView {
         
         if key != previousKey {
             
-            generator.impactOccurred()
+//            generator.impactOccurred()
             previousKey = key
         }
     }

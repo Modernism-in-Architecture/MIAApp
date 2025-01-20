@@ -8,6 +8,11 @@
 import SwiftUI
 import MapKit
 
+extension String {
+    
+    static let backgroundRefreshIdentifier = "org.modernism-in-architecture.MIAapp.refresh"
+}
+
 extension Color {
     
     static let background = Color(UIColor.systemBackground)

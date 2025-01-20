@@ -36,6 +36,7 @@ public enum MIARequest {
     case architects
     case building(id: Int)
     case buildings
+    case buildingsCount(since: Date)
     
     private static let baseUrl = "https://modernism-in-architecture.org/api/v1"
     
@@ -43,17 +44,20 @@ public enum MIARequest {
         
         switch self {
             
-        case .architect(id: let id):
+        case let .architect(id):
             "\(Self.baseUrl)/architects/\(id)/"
             
         case .architects:
             "\(Self.baseUrl)/architects/"
             
-        case .building(id: let id):
+        case let .building(id):
             "\(Self.baseUrl)/buildings/\(id)/"
             
         case .buildings:
             "\(Self.baseUrl)/buildings/"
+        
+        case let .buildingsCount(date):
+            "\(Self.baseUrl)/buildings/count/?since=\(date.toISO8601String())"
         }
     }
     
@@ -63,10 +67,10 @@ public enum MIARequest {
             return nil
         }
         
+        print("Token")
+        print(Secrets.api_token)
         var request = URLRequest(url: url, timeoutInterval: API.timeoout)
         request.addValue("Token \(Secrets.api_token)", forHTTPHeaderField: "Authorization")
         return request
     }
-
-    
 }

@@ -23,6 +23,7 @@ public class BuildingsManager {
         let result = await MIAClient.fetch(.buildings)
         
         switch result {
+            
         case .success(let data):
             
             do {
@@ -48,6 +49,7 @@ public class BuildingsManager {
         Logger.buildingsManager.debug("Load Building with id: \(id) - Time Elapsed: \(CFAbsoluteTimeGetCurrent() - startTime)")
 
         switch result {
+            
         case .success(let data):
             
             do {
@@ -66,6 +68,27 @@ public class BuildingsManager {
 
         case .failure(let error):
             Logger.buildingsManager.debug("\(error)")
+            throw ManagerError(clientError: error)
+        }
+    }
+    
+    public func newBuildingsCount(since date: Date) async throws -> Int {
+        
+        let result = await MIAClient.fetch(.buildingsCount(since: date))
+        
+        switch result {
+            
+        case let .success(data):
+            
+            do {
+                
+                let jsonData = try JSONDecoder().decode(APIBuildingsCount.self, from: data.data)
+                return jsonData.count
+            } catch {
+                throw ManagerError.unknownError
+            }
+            
+        case let .failure(error):
             throw ManagerError(clientError: error)
         }
     }
